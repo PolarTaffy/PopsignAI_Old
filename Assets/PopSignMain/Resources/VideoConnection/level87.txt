@@ -1,0 +1,22 @@
+{
+    "bluefileName": "cry",
+    "blueframeNumber": 69,
+    "bluefolderName": "MacarthurBates/cry",
+    "blueImageName": "WordIcons/cry",
+    "greenfileName": "talk",
+    "greenframeNumber": 97,
+    "greenfolderName": "MacarthurBates/talk",
+    "greenImageName": "WordIcons/talk",
+    "redfileName": "build",
+    "redframeNumber": 107,
+    "redfolderName": "MacarthurBates/build",
+    "redImageName": "WordIcons/build",
+    "violetfileName": "give",
+    "violetframeNumber": 44,
+    "violetfolderName": "MacarthurBates/give",
+    "violetImageName": "WordIcons/give",
+    "yellowfileName": "sleep",
+    "yellowframeNumber": 55,
+    "yellowfolderName": "MacarthurBates/sleep",
+    "yellowImageName": "WordIcons/sleep"
+}

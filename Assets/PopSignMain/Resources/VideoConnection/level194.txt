@@ -1,0 +1,22 @@
+{
+    "bluefileName": "yucky",
+    "blueframeNumber": 51,
+    "bluefolderName": "MacarthurBates/yucky",
+    "blueImageName": "WordIcons/yucky",
+    "greenfileName": "sick",
+    "greenframeNumber": 61,
+    "greenfolderName": "MacarthurBates/sick",
+    "greenImageName": "WordIcons/sick",
+    "redfileName": "brown",
+    "redframeNumber": 50,
+    "redfolderName": "MacarthurBates/brown",
+    "redImageName": "WordIcons/brown",
+    "violetfileName": "full-food",
+    "violetframeNumber": 62,
+    "violetfolderName": "MacarthurBates/full-food",
+    "violetImageName": "WordIcons/full-food",
+    "yellowfileName": "gentle",
+    "yellowframeNumber": 76,
+    "yellowfolderName": "MacarthurBates/gentle",
+    "yellowImageName": "WordIcons/gentle"
+}

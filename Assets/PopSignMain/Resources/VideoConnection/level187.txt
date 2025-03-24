@@ -1,0 +1,22 @@
+{
+    "bluefileName": "farm",
+    "blueframeNumber": 54,
+    "bluefolderName": "MacarthurBates/farm",
+    "blueImageName": "WordIcons/farm",
+    "greenfileName": "yard",
+    "greenframeNumber": 96,
+    "greenfolderName": "MacarthurBates/yard",
+    "greenImageName": "WordIcons/yard",
+    "redfileName": "outside",
+    "redframeNumber": 55,
+    "redfolderName": "MacarthurBates/outside",
+    "redImageName": "WordIcons/outside",
+    "violetfileName": "tv",
+    "violetframeNumber": 56,
+    "violetfolderName": "MacarthurBates/tv",
+    "violetImageName": "WordIcons/tv",
+    "yellowfileName": "now",
+    "yellowframeNumber": 57,
+    "yellowfolderName": "MacarthurBates/now",
+    "yellowImageName": "WordIcons/now"
+}

@@ -1,0 +1,22 @@
+{
+    "bluefileName": "closet",
+    "blueframeNumber": 65,
+    "bluefolderName": "MacarthurBates/closet",
+    "blueImageName": "WordIcons/closet",
+    "greenfileName": "rockingchair",
+    "greenframeNumber": 110,
+    "greenfolderName": "MacarthurBates/rockingchair",
+    "greenImageName": "WordIcons/rockingchair",
+    "redfileName": "plants",
+    "redframeNumber": 46,
+    "redfolderName": "MacarthurBates/plants",
+    "redImageName": "WordIcons/plants",
+    "violetfileName": "livingroom",
+    "violetframeNumber": 82,
+    "violetfolderName": "MacarthurBates/livingroom",
+    "violetImageName": "WordIcons/livingroom",
+    "yellowfileName": "basement",
+    "yellowframeNumber": 78,
+    "yellowfolderName": "MacarthurBates/basement",
+    "yellowImageName": "WordIcons/basement"
+}

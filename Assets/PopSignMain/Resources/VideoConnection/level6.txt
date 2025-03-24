@@ -1,0 +1,22 @@
+{
+    "bluefileName": "kitty",
+    "blueframeNumber": 67,
+    "bluefolderName": "MacarthurBates/kitty",
+    "blueImageName": "WordIcons/kitty",
+    "greenfileName": "rabbit",
+    "greenframeNumber": 12,
+    "greenfolderName": "MacarthurBates/rabbit",
+    "greenImageName": "WordIcons/rabbit",
+    "redfileName": "elephant",
+    "redframeNumber": 65,
+    "redfolderName": "MacarthurBates/elephant",
+    "redImageName": "WordIcons/elephant",
+    "violetfileName": "deer",
+    "violetframeNumber": 46,
+    "violetfolderName": "MacarthurBates/deer",
+    "violetImageName": "WordIcons/deer",
+    "yellowfileName": "lion",
+    "yellowframeNumber": 55,
+    "yellowfolderName": "MacarthurBates/lion",
+    "yellowImageName": "WordIcons/lion"
+}

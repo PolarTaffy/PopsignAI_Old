@@ -1,0 +1,22 @@
+{
+    "bluefileName": "gift",
+    "blueframeNumber": 54,
+    "bluefolderName": "MacarthurBates/gift",
+    "blueImageName": "WordIcons/gift",
+    "greenfileName": "glue",
+    "greenframeNumber": 50,
+    "greenfolderName": "MacarthurBates/glue",
+    "greenImageName": "WordIcons/glue",
+    "redfileName": "puzzle",
+    "redframeNumber": 65,
+    "redfolderName": "MacarthurBates/puzzle",
+    "redImageName": "WordIcons/puzzle",
+    "violetfileName": "book",
+    "violetframeNumber": 75,
+    "violetfolderName": "MacarthurBates/book",
+    "violetImageName": "WordIcons/book",
+    "yellowfileName": "block",
+    "yellowframeNumber": 76,
+    "yellowfolderName": "MacarthurBates/block",
+    "yellowImageName": "WordIcons/block"
+}

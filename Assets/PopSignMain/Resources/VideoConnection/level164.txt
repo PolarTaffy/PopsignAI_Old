@@ -1,0 +1,22 @@
+{
+    "bluefileName": "hesheit",
+    "blueframeNumber": 53,
+    "bluefolderName": "MacarthurBates/hesheit",
+    "blueImageName": "WordIcons/hesheit",
+    "greenfileName": "later",
+    "greenframeNumber": 65,
+    "greenfolderName": "MacarthurBates/later",
+    "greenImageName": "WordIcons/later",
+    "redfileName": "underwear",
+    "redframeNumber": 81,
+    "redfolderName": "MacarthurBates/underwear",
+    "redImageName": "WordIcons/underwear",
+    "violetfileName": "enter",
+    "violetframeNumber": 50,
+    "violetfolderName": "MacarthurBates/enter",
+    "violetImageName": "WordIcons/enter",
+    "yellowfileName": "around",
+    "yellowframeNumber": 70,
+    "yellowfolderName": "MacarthurBates/around",
+    "yellowImageName": "WordIcons/around"
+}

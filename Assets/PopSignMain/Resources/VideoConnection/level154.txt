@@ -1,0 +1,22 @@
+{
+    "bluefileName": "glasswindow",
+    "blueframeNumber": 95,
+    "bluefolderName": "MacarthurBates/glasswindow",
+    "blueImageName": "WordIcons/glasswindow",
+    "greenfileName": "diaper",
+    "greenframeNumber": 62,
+    "greenfolderName": "MacarthurBates/diaper",
+    "greenImageName": "WordIcons/diaper",
+    "redfileName": "sweater",
+    "redframeNumber": 81,
+    "redfolderName": "MacarthurBates/sweater",
+    "redImageName": "WordIcons/sweater",
+    "violetfileName": "hat",
+    "violetframeNumber": 67,
+    "violetfolderName": "MacarthurBates/hat",
+    "violetImageName": "WordIcons/hat",
+    "yellowfileName": "flipflop",
+    "yellowframeNumber": 111,
+    "yellowfolderName": "MacarthurBates/flipflop",
+    "yellowImageName": "WordIcons/flipflop"
+}

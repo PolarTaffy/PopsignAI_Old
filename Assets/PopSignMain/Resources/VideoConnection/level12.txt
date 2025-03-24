@@ -1,0 +1,22 @@
+{
+    "bluefileName": "man",
+    "blueframeNumber": 49,
+    "bluefolderName": "MacarthurBates/man",
+    "blueImageName": "WordIcons/man",
+    "greenfileName": "clown",
+    "greenframeNumber": 102,
+    "greenfolderName": "MacarthurBates/clown",
+    "greenImageName": "WordIcons/clown",
+    "redfileName": "doctor",
+    "redframeNumber": 63,
+    "redfolderName": "MacarthurBates/doctor",
+    "redImageName": "WordIcons/doctor",
+    "violetfileName": "cowboy",
+    "violetframeNumber": 53,
+    "violetfolderName": "MacarthurBates/cowboy",
+    "violetImageName": "WordIcons/cowboy",
+    "yellowfileName": "friend",
+    "yellowframeNumber": 63,
+    "yellowfolderName": "MacarthurBates/friend",
+    "yellowImageName": "WordIcons/friend"
+}

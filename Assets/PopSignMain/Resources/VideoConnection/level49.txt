@@ -1,0 +1,22 @@
+{
+    "bluefileName": "candy",
+    "blueframeNumber": 61,
+    "bluefolderName": "MacarthurBates/candy",
+    "blueImageName": "WordIcons/candy",
+    "greenfileName": "sticky",
+    "greenframeNumber": 63,
+    "greenfolderName": "MacarthurBates/sticky",
+    "greenImageName": "WordIcons/sticky",
+    "redfileName": "refrigerator",
+    "redframeNumber": 93,
+    "redfolderName": "MacarthurBates/refrigerator",
+    "redImageName": "WordIcons/refrigerator",
+    "violetfileName": "like",
+    "violetframeNumber": 83,
+    "violetfolderName": "MacarthurBates/like",
+    "violetImageName": "WordIcons/like",
+    "yellowfileName": "coffee",
+    "yellowframeNumber": 90,
+    "yellowfolderName": "MacarthurBates/coffee",
+    "yellowImageName": "WordIcons/coffee"
+}

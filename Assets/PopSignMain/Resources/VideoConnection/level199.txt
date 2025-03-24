@@ -1,0 +1,22 @@
+{
+    "bluefileName": "more",
+    "blueframeNumber": 61,
+    "bluefolderName": "MacarthurBates/more",
+    "blueImageName": "WordIcons/more",
+    "greenfileName": "another,other",
+    "greenframeNumber": 77,
+    "greenfolderName": "MacarthurBates/another,other",
+    "greenImageName": "WordIcons/another,other",
+    "redfileName": "some",
+    "redframeNumber": 58,
+    "redfolderName": "MacarthurBates/some",
+    "redImageName": "WordIcons/some",
+    "violetfileName": "not",
+    "violetframeNumber": 61,
+    "violetfolderName": "MacarthurBates/not",
+    "violetImageName": "WordIcons/not",
+    "yellowfileName": "each,every",
+    "yellowframeNumber": 71,
+    "yellowfolderName": "MacarthurBates/each,every",
+    "yellowImageName": "WordIcons/each,every"
+}

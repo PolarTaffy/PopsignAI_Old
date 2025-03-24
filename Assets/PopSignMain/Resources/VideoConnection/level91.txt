@@ -1,0 +1,22 @@
+{
+    "bluefileName": "pencil",
+    "blueframeNumber": 50,
+    "bluefolderName": "MacarthurBates/pencil",
+    "blueImageName": "WordIcons/pencil",
+    "greenfileName": "playdough",
+    "greenframeNumber": 69,
+    "greenfolderName": "MacarthurBates/playdough",
+    "greenImageName": "WordIcons/playdough",
+    "redfileName": "story",
+    "redframeNumber": 76,
+    "redfolderName": "MacarthurBates/story",
+    "redImageName": "WordIcons/story",
+    "violetfileName": "doll",
+    "violetframeNumber": 54,
+    "violetfolderName": "MacarthurBates/doll",
+    "violetImageName": "WordIcons/doll",
+    "yellowfileName": "balloon",
+    "yellowframeNumber": 77,
+    "yellowfolderName": "MacarthurBates/balloon",
+    "yellowImageName": "WordIcons/balloon"
+}

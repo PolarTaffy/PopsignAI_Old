@@ -1,0 +1,22 @@
+{
+    "bluefileName": "nap,sleep",
+    "blueframeNumber": 44,
+    "bluefolderName": "MacarthurBates/nap,sleep",
+    "blueImageName": "WordIcons/nap,sleep",
+    "greenfileName": "bye",
+    "greenframeNumber": 68,
+    "greenfolderName": "MacarthurBates/bye",
+    "greenImageName": "WordIcons/bye",
+    "redfileName": "snack",
+    "redframeNumber": 79,
+    "redfolderName": "MacarthurBates/snack",
+    "redImageName": "WordIcons/snack",
+    "violetfileName": "turnaround",
+    "violetframeNumber": 209,
+    "violetfolderName": "MacarthurBates/turnaround",
+    "violetImageName": "WordIcons/turnaround",
+    "yellowfileName": "shopping",
+    "yellowframeNumber": 59,
+    "yellowfolderName": "MacarthurBates/shopping",
+    "yellowImageName": "WordIcons/shopping"
+}

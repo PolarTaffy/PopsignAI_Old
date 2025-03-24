@@ -1,0 +1,22 @@
+{
+    "bluefileName": "time",
+    "blueframeNumber": 63,
+    "bluefolderName": "MacarthurBates/time",
+    "blueImageName": "WordIcons/time",
+    "greenfileName": "later",
+    "greenframeNumber": 64,
+    "greenfolderName": "MacarthurBates/later",
+    "greenImageName": "WordIcons/later",
+    "redfileName": "which",
+    "redframeNumber": 73,
+    "redfolderName": "MacarthurBates/which",
+    "redImageName": "WordIcons/which",
+    "violetfileName": "how",
+    "violetframeNumber": 58,
+    "violetfolderName": "MacarthurBates/how",
+    "violetImageName": "WordIcons/how",
+    "yellowfileName": "none,nothing",
+    "yellowframeNumber": 45,
+    "yellowfolderName": "MacarthurBates/none,nothing",
+    "yellowImageName": "WordIcons/none,nothing"
+}

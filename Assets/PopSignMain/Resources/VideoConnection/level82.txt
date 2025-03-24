@@ -1,0 +1,22 @@
+{
+    "bluefileName": "jump",
+    "blueframeNumber": 68,
+    "bluefolderName": "MacarthurBates/jump",
+    "blueImageName": "WordIcons/jump",
+    "greenfileName": "taste",
+    "greenframeNumber": 69,
+    "greenfolderName": "MacarthurBates/taste",
+    "greenImageName": "WordIcons/taste",
+    "redfileName": "lick",
+    "redframeNumber": 81,
+    "redfolderName": "MacarthurBates/lick",
+    "redImageName": "WordIcons/lick",
+    "violetfileName": "dance",
+    "violetframeNumber": 70,
+    "violetfolderName": "MacarthurBates/dance",
+    "violetImageName": "WordIcons/dance",
+    "yellowfileName": "watch",
+    "yellowframeNumber": 82,
+    "yellowfolderName": "MacarthurBates/watch",
+    "yellowImageName": "WordIcons/watch"
+}

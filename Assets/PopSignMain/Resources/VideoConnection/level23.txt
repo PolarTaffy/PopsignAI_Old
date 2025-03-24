@@ -1,0 +1,22 @@
+{
+    "bluefileName": "firetruck",
+    "blueframeNumber": 84,
+    "bluefolderName": "MacarthurBates/firetruck",
+    "blueImageName": "WordIcons/firetruck",
+    "greenfileName": "cartcarriage",
+    "greenframeNumber": 59,
+    "greenfolderName": "MacarthurBates/cartcarriage",
+    "greenImageName": "WordIcons/cartcarriage",
+    "redfileName": "helicopter",
+    "redframeNumber": 77,
+    "redfolderName": "MacarthurBates/helicopter",
+    "redImageName": "WordIcons/helicopter",
+    "violetfileName": "train",
+    "violetframeNumber": 70,
+    "violetfolderName": "MacarthurBates/train",
+    "violetImageName": "WordIcons/train",
+    "yellowfileName": "boat",
+    "yellowframeNumber": 60,
+    "yellowfolderName": "MacarthurBates/boat",
+    "yellowImageName": "WordIcons/boat"
+}

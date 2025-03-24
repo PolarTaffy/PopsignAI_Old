@@ -1,0 +1,22 @@
+{
+    "bluefileName": "wantto",
+    "blueframeNumber": 65,
+    "bluefolderName": "MacarthurBates/wantto",
+    "blueImageName": "WordIcons/wantto",
+    "greenfileName": "needneedto",
+    "greenframeNumber": 86,
+    "greenfolderName": "MacarthurBates/needneedto",
+    "greenImageName": "WordIcons/needneedto",
+    "redfileName": "dont",
+    "redframeNumber": 57,
+    "redfolderName": "MacarthurBates/dont",
+    "redImageName": "WordIcons/dont",
+    "violetfileName": "will",
+    "violetframeNumber": 55,
+    "violetfolderName": "MacarthurBates/will",
+    "violetImageName": "WordIcons/will",
+    "yellowfileName": "do",
+    "yellowframeNumber": 74,
+    "yellowfolderName": "MacarthurBates/do",
+    "yellowImageName": "WordIcons/do"
+}

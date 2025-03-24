@@ -1,0 +1,22 @@
+{
+    "bluefileName": "sandbox",
+    "blueframeNumber": 96,
+    "bluefolderName": "MacarthurBates/sandbox",
+    "blueImageName": "WordIcons/sandbox",
+    "greenfileName": "shovel",
+    "greenframeNumber": 88,
+    "greenfolderName": "MacarthurBates/shovel",
+    "greenImageName": "WordIcons/shovel",
+    "redfileName": "yourself",
+    "redframeNumber": 56,
+    "redfolderName": "MacarthurBates/yourself",
+    "redImageName": "WordIcons/yourself",
+    "violetfileName": "playgroundschool",
+    "violetframeNumber": 82,
+    "violetfolderName": "MacarthurBates/playgroundschool",
+    "violetImageName": "WordIcons/playgroundschool",
+    "yellowfileName": "sprinkler",
+    "yellowframeNumber": 55,
+    "yellowfolderName": "MacarthurBates/sprinkler",
+    "yellowImageName": "WordIcons/sprinkler"
+}

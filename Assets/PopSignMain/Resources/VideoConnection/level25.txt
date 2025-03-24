@@ -1,0 +1,22 @@
+{
+    "bluefileName": "drink",
+    "blueframeNumber": 86,
+    "bluefolderName": "MacarthurBates/drink",
+    "blueImageName": "WordIcons/drink",
+    "greenfileName": "pumpkin",
+    "greenframeNumber": 76,
+    "greenfolderName": "MacarthurBates/pumpkin",
+    "greenImageName": "WordIcons/pumpkin",
+    "redfileName": "thirsty",
+    "redframeNumber": 55,
+    "redfolderName": "MacarthurBates/thirsty",
+    "redImageName": "WordIcons/thirsty",
+    "violetfileName": "water",
+    "violetframeNumber": 78,
+    "violetfolderName": "MacarthurBates/water",
+    "violetImageName": "WordIcons/water",
+    "yellowfileName": "milk",
+    "yellowframeNumber": 63,
+    "yellowfolderName": "MacarthurBates/milk",
+    "yellowImageName": "WordIcons/milk"
+}

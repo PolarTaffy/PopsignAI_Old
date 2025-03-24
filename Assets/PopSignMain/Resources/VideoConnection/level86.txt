@@ -1,0 +1,22 @@
+{
+    "bluefileName": "buy",
+    "blueframeNumber": 84,
+    "bluefolderName": "MacarthurBates/buy",
+    "blueImageName": "WordIcons/buy",
+    "greenfileName": "feed",
+    "greenframeNumber": 86,
+    "greenfolderName": "MacarthurBates/feed",
+    "greenImageName": "WordIcons/feed",
+    "redfileName": "fall",
+    "redframeNumber": 45,
+    "redfolderName": "MacarthurBates/fall",
+    "redImageName": "WordIcons/fall",
+    "violetfileName": "touch",
+    "violetframeNumber": 39,
+    "violetfolderName": "MacarthurBates/touch",
+    "violetImageName": "WordIcons/touch",
+    "yellowfileName": "get",
+    "yellowframeNumber": 65,
+    "yellowfolderName": "MacarthurBates/get",
+    "yellowImageName": "WordIcons/get"
+}

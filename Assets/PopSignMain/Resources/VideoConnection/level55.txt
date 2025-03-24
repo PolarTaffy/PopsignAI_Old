@@ -1,0 +1,22 @@
+{
+    "bluefileName": "kiss",
+    "blueframeNumber": 51,
+    "bluefolderName": "MacarthurBates/kiss",
+    "blueImageName": "WordIcons/kiss",
+    "greenfileName": "hit",
+    "greenframeNumber": 41,
+    "greenfolderName": "MacarthurBates/hit",
+    "greenImageName": "WordIcons/hit",
+    "redfileName": "go",
+    "redframeNumber": 66,
+    "redfolderName": "MacarthurBates/go",
+    "redImageName": "WordIcons/go",
+    "violetfileName": "wipe,clean",
+    "violetframeNumber": 82,
+    "violetfolderName": "MacarthurBates/wipe,clean",
+    "violetImageName": "WordIcons/wipe,clean",
+    "yellowfileName": "sit",
+    "yellowframeNumber": 71,
+    "yellowfolderName": "MacarthurBates/sit",
+    "yellowImageName": "WordIcons/sit"
+}

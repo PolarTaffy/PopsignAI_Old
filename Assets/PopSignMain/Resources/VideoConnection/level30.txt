@@ -1,0 +1,22 @@
+{
+    "bluefileName": "table",
+    "blueframeNumber": 58,
+    "bluefolderName": "MacarthurBates/table",
+    "blueImageName": "WordIcons/table",
+    "greenfileName": "oven",
+    "greenframeNumber": 95,
+    "greenfolderName": "MacarthurBates/oven",
+    "greenImageName": "WordIcons/oven",
+    "redfileName": "dryer",
+    "redframeNumber": 70,
+    "redfolderName": "MacarthurBates/dryer",
+    "redImageName": "WordIcons/dryer",
+    "violetfileName": "chair",
+    "violetframeNumber": 56,
+    "violetfolderName": "MacarthurBates/chair",
+    "violetImageName": "WordIcons/chair",
+    "yellowfileName": "window",
+    "yellowframeNumber": 58,
+    "yellowfolderName": "MacarthurBates/window",
+    "yellowImageName": "WordIcons/window"
+}

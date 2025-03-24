@@ -1,0 +1,22 @@
+{
+    "bluefileName": "sticky",
+    "blueframeNumber": 61,
+    "bluefolderName": "MacarthurBates/sticky",
+    "blueImageName": "WordIcons/sticky",
+    "greenfileName": "blue",
+    "greenframeNumber": 59,
+    "greenfolderName": "MacarthurBates/blue",
+    "greenImageName": "WordIcons/blue",
+    "redfileName": "mad",
+    "redframeNumber": 47,
+    "redfolderName": "MacarthurBates/mad",
+    "redImageName": "WordIcons/mad",
+    "violetfileName": "hurt",
+    "violetframeNumber": 73,
+    "violetfolderName": "MacarthurBates/hurt",
+    "violetImageName": "WordIcons/hurt",
+    "yellowfileName": "full-container",
+    "yellowframeNumber": 38,
+    "yellowfolderName": "MacarthurBates/full-container",
+    "yellowImageName": "WordIcons/full-container"
+}

@@ -1,0 +1,22 @@
+{
+    "bluefileName": "apple",
+    "blueframeNumber": 100,
+    "bluefolderName": "MacarthurBates/apple",
+    "blueImageName": "WordIcons/apple",
+    "greenfileName": "popsicle",
+    "greenframeNumber": 83,
+    "greenfolderName": "MacarthurBates/popsicle",
+    "greenImageName": "WordIcons/popsicle",
+    "redfileName": "frenchfries",
+    "redframeNumber": 65,
+    "redfolderName": "MacarthurBates/frenchfries",
+    "redImageName": "WordIcons/frenchfries",
+    "violetfileName": "eat",
+    "violetframeNumber": 94,
+    "violetfolderName": "MacarthurBates/eat",
+    "violetImageName": "WordIcons/eat",
+    "yellowfileName": "carrot",
+    "yellowframeNumber": 79,
+    "yellowfolderName": "MacarthurBates/carrot",
+    "yellowImageName": "WordIcons/carrot"
+}

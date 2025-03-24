@@ -1,0 +1,22 @@
+{
+    "bluefileName": "flipflop",
+    "blueframeNumber": 69,
+    "bluefolderName": "MacarthurBates/flipflop",
+    "blueImageName": "WordIcons/flipflop",
+    "greenfileName": "candy",
+    "greenframeNumber": 65,
+    "greenfolderName": "MacarthurBates/candy",
+    "greenImageName": "WordIcons/candy",
+    "redfileName": "popsicle",
+    "redframeNumber": 66,
+    "redfolderName": "MacarthurBates/popsicle",
+    "redImageName": "WordIcons/popsicle",
+    "violetfileName": "hot",
+    "violetframeNumber": 81,
+    "violetfolderName": "MacarthurBates/hot",
+    "violetImageName": "WordIcons/hot",
+    "yellowfileName": "sun",
+    "yellowframeNumber": 68,
+    "yellowfolderName": "MacarthurBates/sun",
+    "yellowImageName": "WordIcons/sun"
+}

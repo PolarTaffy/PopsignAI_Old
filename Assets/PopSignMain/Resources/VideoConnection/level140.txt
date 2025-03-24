@@ -1,0 +1,22 @@
+{
+    "bluefileName": "flower",
+    "blueframeNumber": 58,
+    "bluefolderName": "MacarthurBates/flower",
+    "blueImageName": "WordIcons/flower",
+    "greenfileName": "cloud",
+    "greenframeNumber": 75,
+    "greenfolderName": "MacarthurBates/cloud",
+    "greenImageName": "WordIcons/cloud",
+    "redfileName": "sky",
+    "redframeNumber": 70,
+    "redfolderName": "MacarthurBates/sky",
+    "redImageName": "WordIcons/sky",
+    "violetfileName": "tree",
+    "violetframeNumber": 56,
+    "violetfolderName": "MacarthurBates/tree",
+    "violetImageName": "WordIcons/tree",
+    "yellowfileName": "plants",
+    "yellowframeNumber": 58,
+    "yellowfolderName": "MacarthurBates/plants",
+    "yellowImageName": "WordIcons/plants"
+}

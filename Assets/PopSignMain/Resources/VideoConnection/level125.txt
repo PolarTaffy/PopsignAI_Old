@@ -1,0 +1,22 @@
+{
+    "bluefileName": "stuck",
+    "blueframeNumber": 63,
+    "bluefolderName": "MacarthurBates/stuck",
+    "blueImageName": "WordIcons/stuck",
+    "greenfileName": "pretty",
+    "greenframeNumber": 60,
+    "greenfolderName": "MacarthurBates/pretty",
+    "greenImageName": "WordIcons/pretty",
+    "redfileName": "dirty",
+    "redframeNumber": 74,
+    "redfolderName": "MacarthurBates/dirty",
+    "redImageName": "WordIcons/dirty",
+    "violetfileName": "little",
+    "violetframeNumber": 49,
+    "violetfolderName": "MacarthurBates/little",
+    "violetImageName": "WordIcons/little",
+    "yellowfileName": "tiny",
+    "yellowframeNumber": 58,
+    "yellowfolderName": "MacarthurBates/tiny",
+    "yellowImageName": "WordIcons/tiny"
+}

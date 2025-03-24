@@ -1,0 +1,22 @@
+{
+    "bluefileName": "shower",
+    "blueframeNumber": 78,
+    "bluefolderName": "MacarthurBates/shower",
+    "blueImageName": "WordIcons/shower",
+    "greenfileName": "room",
+    "greenframeNumber": 63,
+    "greenfolderName": "MacarthurBates/room",
+    "greenImageName": "WordIcons/room",
+    "redfileName": "drawer",
+    "redframeNumber": 43,
+    "redfolderName": "MacarthurBates/drawer",
+    "redImageName": "WordIcons/drawer",
+    "violetfileName": "bathroom",
+    "violetframeNumber": 63,
+    "violetfolderName": "MacarthurBates/bathroom",
+    "violetImageName": "WordIcons/bathroom",
+    "yellowfileName": "bed",
+    "yellowframeNumber": 60,
+    "yellowfolderName": "MacarthurBates/bed",
+    "yellowImageName": "WordIcons/bed"
+}

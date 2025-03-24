@@ -1,0 +1,22 @@
+{
+    "bluefileName": "make",
+    "blueframeNumber": 38,
+    "bluefolderName": "MacarthurBates/make",
+    "blueImageName": "WordIcons/make",
+    "greenfileName": "bring",
+    "greenframeNumber": 52,
+    "greenfolderName": "MacarthurBates/bring",
+    "greenImageName": "WordIcons/bring",
+    "redfileName": "dump",
+    "redframeNumber": 61,
+    "redfolderName": "MacarthurBates/dump",
+    "redImageName": "WordIcons/dump",
+    "violetfileName": "look",
+    "violetframeNumber": 58,
+    "violetfolderName": "MacarthurBates/look",
+    "violetImageName": "WordIcons/look",
+    "yellowfileName": "bubbles",
+    "yellowframeNumber": 65,
+    "yellowfolderName": "MacarthurBates/bubbles",
+    "yellowImageName": "WordIcons/bubbles"
+}

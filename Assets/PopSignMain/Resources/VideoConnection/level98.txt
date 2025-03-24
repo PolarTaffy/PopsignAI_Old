@@ -1,0 +1,22 @@
+{
+    "bluefileName": "green",
+    "blueframeNumber": 44,
+    "bluefolderName": "MacarthurBates/green",
+    "blueImageName": "WordIcons/green",
+    "greenfileName": "fine",
+    "greenframeNumber": 62,
+    "greenfolderName": "MacarthurBates/fine",
+    "greenImageName": "WordIcons/fine",
+    "redfileName": "big-tall",
+    "redframeNumber": 61,
+    "redfolderName": "MacarthurBates/big-tall",
+    "redImageName": "WordIcons/big-tall",
+    "violetfileName": "new",
+    "violetframeNumber": 51,
+    "violetfolderName": "MacarthurBates/new",
+    "violetImageName": "WordIcons/new",
+    "yellowfileName": "asleep",
+    "yellowframeNumber": 74,
+    "yellowfolderName": "MacarthurBates/asleep",
+    "yellowImageName": "WordIcons/asleep"
+}

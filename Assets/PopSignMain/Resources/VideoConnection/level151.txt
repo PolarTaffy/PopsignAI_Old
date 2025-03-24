@@ -1,0 +1,22 @@
+{
+    "bluefileName": "belt",
+    "blueframeNumber": 43,
+    "bluefolderName": "MacarthurBates/belt",
+    "blueImageName": "WordIcons/belt",
+    "greenfileName": "skirt",
+    "greenframeNumber": 56,
+    "greenfolderName": "MacarthurBates/skirt",
+    "greenImageName": "WordIcons/skirt",
+    "redfileName": "gloves",
+    "redframeNumber": 68,
+    "redfolderName": "MacarthurBates/gloves",
+    "redImageName": "WordIcons/gloves",
+    "violetfileName": "coats",
+    "violetframeNumber": 79,
+    "violetfolderName": "MacarthurBates/coats",
+    "violetImageName": "WordIcons/coats",
+    "yellowfileName": "button",
+    "yellowframeNumber": 98,
+    "yellowfolderName": "MacarthurBates/button",
+    "yellowImageName": "WordIcons/button"
+}

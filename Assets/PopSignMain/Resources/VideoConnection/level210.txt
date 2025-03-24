@@ -1,0 +1,22 @@
+{
+    "bluefileName": "penguin",
+    "blueframeNumber": 79,
+    "bluefolderName": "MacarthurBates/penguin",
+    "blueImageName": "WordIcons/penguin",
+    "greenfileName": "rooster",
+    "greenframeNumber": 74,
+    "greenfolderName": "MacarthurBates/rooster",
+    "greenImageName": "WordIcons/rooster",
+    "redfileName": "frog",
+    "redframeNumber": 59,
+    "redfolderName": "MacarthurBates/frog",
+    "redImageName": "WordIcons/frog",
+    "violetfileName": "sheep",
+    "violetframeNumber": 61,
+    "violetfolderName": "MacarthurBates/sheep",
+    "violetImageName": "WordIcons/sheep",
+    "yellowfileName": "tiger",
+    "yellowframeNumber": 48,
+    "yellowfolderName": "MacarthurBates/tiger",
+    "yellowImageName": "WordIcons/tiger"
+}

@@ -1,0 +1,22 @@
+{
+    "bluefileName": "balloon",
+    "blueframeNumber": 73,
+    "bluefolderName": "MacarthurBates/balloon",
+    "blueImageName": "WordIcons/balloon",
+    "greenfileName": "clown",
+    "greenframeNumber": 88,
+    "greenfolderName": "MacarthurBates/clown",
+    "greenImageName": "WordIcons/clown",
+    "redfileName": "icecream",
+    "redframeNumber": 88,
+    "redfolderName": "MacarthurBates/icecream",
+    "redImageName": "WordIcons/icecream",
+    "violetfileName": "chocolate",
+    "violetframeNumber": 69,
+    "violetfolderName": "MacarthurBates/chocolate",
+    "violetImageName": "WordIcons/chocolate",
+    "yellowfileName": "elephant",
+    "yellowframeNumber": 86,
+    "yellowfolderName": "MacarthurBates/elephant",
+    "yellowImageName": "WordIcons/elephant"
+}

@@ -1,0 +1,22 @@
+{
+    "bluefileName": "grapes",
+    "blueframeNumber": 61,
+    "bluefolderName": "MacarthurBates/grapes",
+    "blueImageName": "WordIcons/grapes",
+    "greenfileName": "food",
+    "greenframeNumber": 27,
+    "greenfolderName": "MacarthurBates/food",
+    "greenImageName": "WordIcons/food",
+    "redfileName": "yogurt",
+    "redframeNumber": 86,
+    "redfolderName": "MacarthurBates/yogurt",
+    "redImageName": "WordIcons/yogurt",
+    "violetfileName": "cheese",
+    "violetframeNumber": 86,
+    "violetfolderName": "MacarthurBates/cheese",
+    "violetImageName": "WordIcons/cheese",
+    "yellowfileName": "orange",
+    "yellowframeNumber": 76,
+    "yellowfolderName": "MacarthurBates/orange",
+    "yellowImageName": "WordIcons/orange"
+}

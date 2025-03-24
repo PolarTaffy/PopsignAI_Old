@@ -1,0 +1,22 @@
+{
+    "bluefileName": "broken",
+    "blueframeNumber": 45,
+    "bluefolderName": "MacarthurBates/broken",
+    "blueImageName": "WordIcons/broken",
+    "greenfileName": "last",
+    "greenframeNumber": 55,
+    "greenfolderName": "MacarthurBates/last",
+    "greenImageName": "WordIcons/last",
+    "redfileName": "tired",
+    "redframeNumber": 58,
+    "redfolderName": "MacarthurBates/tired",
+    "redImageName": "WordIcons/tired",
+    "violetfileName": "wet",
+    "violetframeNumber": 73,
+    "violetfolderName": "MacarthurBates/wet",
+    "violetImageName": "WordIcons/wet",
+    "yellowfileName": "poor",
+    "yellowframeNumber": 83,
+    "yellowfolderName": "MacarthurBates/poor",
+    "yellowImageName": "WordIcons/poor"
+}

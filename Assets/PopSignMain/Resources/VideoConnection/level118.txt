@@ -1,0 +1,22 @@
+{
+    "bluefileName": "star",
+    "blueframeNumber": 45,
+    "bluefolderName": "MacarthurBates/star",
+    "blueImageName": "WordIcons/star",
+    "greenfileName": "shovel",
+    "greenframeNumber": 64,
+    "greenfolderName": "MacarthurBates/shovel",
+    "greenImageName": "WordIcons/shovel",
+    "redfileName": "snowman",
+    "redframeNumber": 71,
+    "redfolderName": "MacarthurBates/snowman",
+    "redImageName": "WordIcons/snowman",
+    "violetfileName": "rain",
+    "violetframeNumber": 75,
+    "violetfolderName": "MacarthurBates/rain",
+    "violetImageName": "WordIcons/rain",
+    "yellowfileName": "slide",
+    "yellowframeNumber": 70,
+    "yellowfolderName": "MacarthurBates/slide",
+    "yellowImageName": "WordIcons/slide"
+}

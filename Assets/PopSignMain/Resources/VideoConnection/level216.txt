@@ -1,0 +1,22 @@
+{
+    "bluefileName": "dinosaur",
+    "blueframeNumber": 65,
+    "bluefolderName": "MacarthurBates/dinosaur",
+    "blueImageName": "WordIcons/dinosaur",
+    "greenfileName": "owl",
+    "greenframeNumber": 60,
+    "greenfolderName": "MacarthurBates/owl",
+    "greenImageName": "WordIcons/owl",
+    "redfileName": "hen",
+    "redframeNumber": 61,
+    "redfolderName": "MacarthurBates/hen",
+    "redImageName": "WordIcons/hen",
+    "violetfileName": "bee",
+    "violetframeNumber": 65,
+    "violetfolderName": "MacarthurBates/bee",
+    "violetImageName": "WordIcons/bee",
+    "yellowfileName": "donkey",
+    "yellowframeNumber": 65,
+    "yellowfolderName": "MacarthurBates/donkey",
+    "yellowImageName": "WordIcons/donkey"
+}

@@ -1,0 +1,22 @@
+{
+    "bluefileName": "chicken",
+    "blueframeNumber": 88,
+    "bluefolderName": "MacarthurBates/chicken",
+    "blueImageName": "WordIcons/chicken",
+    "greenfileName": "plate",
+    "greenframeNumber": 45,
+    "greenfolderName": "MacarthurBates/plate",
+    "greenImageName": "WordIcons/plate",
+    "redfileName": "peas",
+    "redframeNumber": 102,
+    "redfolderName": "MacarthurBates/peas",
+    "redImageName": "WordIcons/peas",
+    "violetfileName": "potato",
+    "violetframeNumber": 66,
+    "violetfolderName": "MacarthurBates/potato",
+    "violetImageName": "WordIcons/potato",
+    "yellowfileName": "pizza",
+    "yellowframeNumber": 73,
+    "yellowfolderName": "MacarthurBates/pizza",
+    "yellowImageName": "WordIcons/pizza"
+}

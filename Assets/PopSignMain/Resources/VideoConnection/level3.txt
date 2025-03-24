@@ -1,0 +1,22 @@
+{
+    "bluefileName": "yogurt",
+    "blueframeNumber": 88,
+    "bluefolderName": "MacarthurBates/yogurt",
+    "blueImageName": "WordIcons/yogurt",
+    "greenfileName": "carrot",
+    "greenframeNumber": 74,
+    "greenfolderName": "MacarthurBates/carrot",
+    "greenImageName": "WordIcons/carrot",
+    "redfileName": "gum",
+    "redframeNumber": 64,
+    "redfolderName": "MacarthurBates/gum",
+    "redImageName": "WordIcons/gum",
+    "violetfileName": "grapes",
+    "violetframeNumber": 73,
+    "violetfolderName": "MacarthurBates/grapes",
+    "violetImageName": "WordIcons/grapes",
+    "yellowfileName": "sodapop",
+    "yellowframeNumber": 83,
+    "yellowfolderName": "MacarthurBates/sodapop",
+    "yellowImageName": "WordIcons/sodapop"
+}

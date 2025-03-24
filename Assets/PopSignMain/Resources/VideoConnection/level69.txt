@@ -1,0 +1,22 @@
+{
+    "bluefileName": "hear",
+    "blueframeNumber": 74,
+    "bluefolderName": "MacarthurBates/hear",
+    "blueImageName": "WordIcons/hear",
+    "greenfileName": "hold",
+    "greenframeNumber": 89,
+    "greenfolderName": "MacarthurBates/hold",
+    "greenImageName": "WordIcons/hold",
+    "redfileName": "have",
+    "redframeNumber": 43,
+    "redfolderName": "MacarthurBates/have",
+    "redImageName": "WordIcons/have",
+    "violetfileName": "wake up",
+    "violetframeNumber": 63,
+    "violetfolderName": "MacarthurBates/wake up",
+    "violetImageName": "WordIcons/wake up",
+    "yellowfileName": "throw",
+    "yellowframeNumber": 74,
+    "yellowfolderName": "MacarthurBates/throw",
+    "yellowImageName": "WordIcons/throw"
+}

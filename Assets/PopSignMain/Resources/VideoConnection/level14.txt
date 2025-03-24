@@ -1,0 +1,22 @@
+{
+    "bluefileName": "girl",
+    "blueframeNumber": 53,
+    "bluefolderName": "MacarthurBates/girl",
+    "blueImageName": "WordIcons/girl",
+    "greenfileName": "person",
+    "greenframeNumber": 44,
+    "greenfolderName": "MacarthurBates/person",
+    "greenImageName": "WordIcons/person",
+    "redfileName": "mom",
+    "redframeNumber": 43,
+    "redfolderName": "MacarthurBates/mom",
+    "redImageName": "WordIcons/mom",
+    "violetfileName": "children",
+    "violetframeNumber": 59,
+    "violetfolderName": "MacarthurBates/children",
+    "violetImageName": "WordIcons/children",
+    "yellowfileName": "teacher",
+    "yellowframeNumber": 57,
+    "yellowfolderName": "MacarthurBates/teacher",
+    "yellowImageName": "WordIcons/teacher"
+}

@@ -1,0 +1,22 @@
+{
+    "bluefileName": "rain",
+    "blueframeNumber": 56,
+    "bluefolderName": "MacarthurBates/rain",
+    "blueImageName": "WordIcons/rain",
+    "greenfileName": "water",
+    "greenframeNumber": 43,
+    "greenfolderName": "MacarthurBates/water",
+    "greenImageName": "WordIcons/water",
+    "redfileName": "chocolate",
+    "redframeNumber": 81,
+    "redfolderName": "MacarthurBates/chocolate",
+    "redImageName": "WordIcons/chocolate",
+    "violetfileName": "cereal",
+    "violetframeNumber": 96,
+    "violetfolderName": "MacarthurBates/cereal",
+    "violetImageName": "WordIcons/cereal",
+    "yellowfileName": "frenchfries",
+    "yellowframeNumber": 62,
+    "yellowfolderName": "MacarthurBates/frenchfries",
+    "yellowImageName": "WordIcons/frenchfries"
+}

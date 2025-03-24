@@ -1,0 +1,22 @@
+{
+    "bluefileName": "close",
+    "blueframeNumber": 93,
+    "bluefolderName": "MacarthurBates/close",
+    "blueImageName": "WordIcons/close",
+    "greenfileName": "skate",
+    "greenframeNumber": 67,
+    "greenfolderName": "MacarthurBates/skate",
+    "greenImageName": "WordIcons/skate",
+    "redfileName": "say",
+    "redframeNumber": 59,
+    "redfolderName": "MacarthurBates/say",
+    "redImageName": "WordIcons/say",
+    "violetfileName": "play",
+    "violetframeNumber": 45,
+    "violetfolderName": "MacarthurBates/play",
+    "violetImageName": "WordIcons/play",
+    "yellowfileName": "love it",
+    "yellowframeNumber": 49,
+    "yellowfolderName": "MacarthurBates/love it",
+    "yellowImageName": "WordIcons/love it"
+}

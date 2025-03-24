@@ -1,0 +1,22 @@
+{
+    "bluefileName": "radio",
+    "blueframeNumber": 83,
+    "bluefolderName": "MacarthurBates/radio",
+    "blueImageName": "WordIcons/radio",
+    "greenfileName": "nuts",
+    "greenframeNumber": 83,
+    "greenfolderName": "MacarthurBates/nuts",
+    "greenImageName": "WordIcons/nuts",
+    "redfileName": "juice",
+    "redframeNumber": 55,
+    "redfolderName": "MacarthurBates/juice",
+    "redImageName": "WordIcons/juice",
+    "violetfileName": "toast",
+    "violetframeNumber": 65,
+    "violetfolderName": "MacarthurBates/toast",
+    "violetImageName": "WordIcons/toast",
+    "yellowfileName": "milk",
+    "yellowframeNumber": 73,
+    "yellowfolderName": "MacarthurBates/milk",
+    "yellowImageName": "WordIcons/milk"
+}

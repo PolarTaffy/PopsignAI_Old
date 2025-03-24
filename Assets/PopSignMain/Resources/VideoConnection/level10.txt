@@ -1,0 +1,22 @@
+{
+    "bluefileName": "boy",
+    "blueframeNumber": 65,
+    "bluefolderName": "MacarthurBates/boy",
+    "blueImageName": "WordIcons/boy",
+    "greenfileName": "police",
+    "greenframeNumber": 44,
+    "greenfolderName": "MacarthurBates/police",
+    "greenImageName": "WordIcons/police",
+    "redfileName": "grandpa",
+    "redframeNumber": 62,
+    "redfolderName": "MacarthurBates/grandpa",
+    "redImageName": "WordIcons/grandpa",
+    "violetfileName": "nurse",
+    "violetframeNumber": 47,
+    "violetfolderName": "MacarthurBates/nurse",
+    "violetImageName": "WordIcons/nurse",
+    "yellowfileName": "babysitter",
+    "yellowframeNumber": 104,
+    "yellowfolderName": "MacarthurBates/babysitter",
+    "yellowImageName": "WordIcons/babysitter"
+}

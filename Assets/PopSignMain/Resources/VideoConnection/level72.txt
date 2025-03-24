@@ -1,0 +1,22 @@
+{
+    "bluefileName": "train",
+    "blueframeNumber": 90,
+    "bluefolderName": "MacarthurBates/train",
+    "blueImageName": "WordIcons/train",
+    "greenfileName": "firetruck",
+    "greenframeNumber": 55,
+    "greenfolderName": "MacarthurBates/firetruck",
+    "greenImageName": "WordIcons/firetruck",
+    "redfileName": "street",
+    "redframeNumber": 80,
+    "redfolderName": "MacarthurBates/street",
+    "redImageName": "WordIcons/street",
+    "violetfileName": "potato",
+    "violetframeNumber": 39,
+    "violetfolderName": "MacarthurBates/potato",
+    "violetImageName": "WordIcons/potato",
+    "yellowfileName": "snow",
+    "yellowframeNumber": 94,
+    "yellowfolderName": "MacarthurBates/snow",
+    "yellowImageName": "WordIcons/snow"
+}

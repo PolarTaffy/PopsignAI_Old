@@ -1,0 +1,22 @@
+{
+    "bluefileName": "wolf",
+    "blueframeNumber": 72,
+    "bluefolderName": "MacarthurBates/wolf",
+    "blueImageName": "WordIcons/wolf",
+    "greenfileName": "weus",
+    "greenframeNumber": 51,
+    "greenfolderName": "MacarthurBates/weus",
+    "greenImageName": "WordIcons/weus",
+    "redfileName": "work",
+    "redframeNumber": 51,
+    "redfolderName": "MacarthurBates/work",
+    "redImageName": "WordIcons/work",
+    "violetfileName": "outside",
+    "violetframeNumber": 48,
+    "violetfolderName": "MacarthurBates/outside",
+    "violetImageName": "WordIcons/outside",
+    "yellowfileName": "store",
+    "yellowframeNumber": 66,
+    "yellowfolderName": "MacarthurBates/store",
+    "yellowImageName": "WordIcons/store"
+}

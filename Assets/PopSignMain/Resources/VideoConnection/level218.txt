@@ -1,0 +1,22 @@
+{
+    "bluefileName": "butterfly",
+    "blueframeNumber": 42,
+    "bluefolderName": "MacarthurBates/butterfly",
+    "blueImageName": "WordIcons/butterfly",
+    "greenfileName": "turtle",
+    "greenframeNumber": 70,
+    "greenfolderName": "MacarthurBates/turtle",
+    "greenImageName": "WordIcons/turtle",
+    "redfileName": "horse",
+    "redframeNumber": 70,
+    "redfolderName": "MacarthurBates/horse",
+    "redImageName": "WordIcons/horse",
+    "violetfileName": "duck",
+    "violetframeNumber": 56,
+    "violetfolderName": "MacarthurBates/duck",
+    "violetImageName": "WordIcons/duck",
+    "yellowfileName": "dog",
+    "yellowframeNumber": 35,
+    "yellowfolderName": "MacarthurBates/dog",
+    "yellowImageName": "WordIcons/dog"
+}

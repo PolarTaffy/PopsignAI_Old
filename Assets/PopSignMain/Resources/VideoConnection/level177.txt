@@ -1,0 +1,22 @@
+{
+    "bluefileName": "minemy",
+    "blueframeNumber": 60,
+    "bluefolderName": "MacarthurBates/minemy",
+    "blueImageName": "WordIcons/minemy",
+    "greenfileName": "that",
+    "greenframeNumber": 64,
+    "greenfolderName": "MacarthurBates/that",
+    "greenImageName": "WordIcons/that",
+    "redfileName": "lunch",
+    "redframeNumber": 57,
+    "redfolderName": "MacarthurBates/lunch",
+    "redImageName": "WordIcons/lunch",
+    "violetfileName": "then",
+    "violetframeNumber": 48,
+    "violetfolderName": "MacarthurBates/then",
+    "violetImageName": "WordIcons/then",
+    "yellowfileName": "who",
+    "yellowframeNumber": 84,
+    "yellowfolderName": "MacarthurBates/who",
+    "yellowImageName": "WordIcons/who"
+}

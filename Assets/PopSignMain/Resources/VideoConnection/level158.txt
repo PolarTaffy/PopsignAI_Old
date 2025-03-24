@@ -1,0 +1,22 @@
+{
+    "bluefileName": "mitten",
+    "blueframeNumber": 62,
+    "bluefolderName": "MacarthurBates/mitten",
+    "blueImageName": "WordIcons/mitten",
+    "greenfileName": "pants",
+    "greenframeNumber": 75,
+    "greenfolderName": "MacarthurBates/pants",
+    "greenImageName": "WordIcons/pants",
+    "redfileName": "hat",
+    "redframeNumber": 90,
+    "redfolderName": "MacarthurBates/hat",
+    "redImageName": "WordIcons/hat",
+    "violetfileName": "pajamas",
+    "violetframeNumber": 68,
+    "violetfolderName": "MacarthurBates/pajamas",
+    "violetImageName": "WordIcons/pajamas",
+    "yellowfileName": "slipper",
+    "yellowframeNumber": 70,
+    "yellowfolderName": "MacarthurBates/slipper",
+    "yellowImageName": "WordIcons/slipper"
+}

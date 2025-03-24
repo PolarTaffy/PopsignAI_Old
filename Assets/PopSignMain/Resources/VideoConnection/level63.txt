@@ -1,0 +1,22 @@
+{
+    "bluefileName": "push",
+    "blueframeNumber": 54,
+    "bluefolderName": "MacarthurBates/push",
+    "blueImageName": "WordIcons/push",
+    "greenfileName": "share",
+    "greenframeNumber": 75,
+    "greenfolderName": "MacarthurBates/share",
+    "greenImageName": "WordIcons/share",
+    "redfileName": "cover",
+    "redframeNumber": 77,
+    "redfolderName": "MacarthurBates/cover",
+    "redImageName": "WordIcons/cover",
+    "violetfileName": "taken",
+    "violetframeNumber": 92,
+    "violetfolderName": "MacarthurBates/taken",
+    "violetImageName": "WordIcons/taken",
+    "yellowfileName": "drive",
+    "yellowframeNumber": 83,
+    "yellowfolderName": "MacarthurBates/drive",
+    "yellowImageName": "WordIcons/drive"
+}

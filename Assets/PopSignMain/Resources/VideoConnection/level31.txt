@@ -1,0 +1,22 @@
+{
+    "bluefileName": "washingmachine",
+    "blueframeNumber": 78,
+    "bluefolderName": "MacarthurBates/washingmachine",
+    "blueImageName": "WordIcons/washingmachine",
+    "greenfileName": "playpen",
+    "greenframeNumber": 113,
+    "greenfolderName": "MacarthurBates/playpen",
+    "greenImageName": "WordIcons/playpen",
+    "redfileName": "stove",
+    "redframeNumber": 84,
+    "redfolderName": "MacarthurBates/stove",
+    "redImageName": "WordIcons/stove",
+    "violetfileName": "refrigerator",
+    "violetframeNumber": 83,
+    "violetfolderName": "MacarthurBates/refrigerator",
+    "violetImageName": "WordIcons/refrigerator",
+    "yellowfileName": "door",
+    "yellowframeNumber": 77,
+    "yellowfolderName": "MacarthurBates/door",
+    "yellowImageName": "WordIcons/door"
+}

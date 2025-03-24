@@ -1,0 +1,22 @@
+{
+    "bluefileName": "paint",
+    "blueframeNumber": 55,
+    "bluefolderName": "MacarthurBates/paint",
+    "blueImageName": "WordIcons/paint",
+    "greenfileName": "fall",
+    "greenframeNumber": 67,
+    "greenfolderName": "MacarthurBates/fall",
+    "greenImageName": "WordIcons/fall",
+    "redfileName": "show",
+    "redframeNumber": 78,
+    "redfolderName": "MacarthurBates/show",
+    "redImageName": "WordIcons/show",
+    "violetfileName": "pour",
+    "violetframeNumber": 63,
+    "violetfolderName": "MacarthurBates/pour",
+    "violetImageName": "WordIcons/pour",
+    "yellowfileName": "sing,song,music,play music",
+    "yellowframeNumber": 66,
+    "yellowfolderName": "MacarthurBates/sing,song,music,play music",
+    "yellowImageName": "WordIcons/sing,song,music,play music"
+}

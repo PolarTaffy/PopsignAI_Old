@@ -1,0 +1,22 @@
+{
+    "bluefileName": "when",
+    "blueframeNumber": 45,
+    "bluefolderName": "MacarthurBates/when",
+    "blueImageName": "WordIcons/when",
+    "greenfileName": "why",
+    "greenframeNumber": 81,
+    "greenfolderName": "MacarthurBates/why",
+    "greenImageName": "WordIcons/why",
+    "redfileName": "there",
+    "redframeNumber": 43,
+    "redfolderName": "MacarthurBates/there",
+    "redImageName": "WordIcons/there",
+    "violetfileName": "on",
+    "violetframeNumber": 21,
+    "violetfolderName": "MacarthurBates/on",
+    "violetImageName": "WordIcons/on",
+    "yellowfileName": "for",
+    "yellowframeNumber": 57,
+    "yellowfolderName": "MacarthurBates/for",
+    "yellowImageName": "WordIcons/for"
+}

@@ -1,0 +1,22 @@
+{
+    "bluefileName": "dinner",
+    "blueframeNumber": 53,
+    "bluefolderName": "MacarthurBates/dinner",
+    "blueImageName": "WordIcons/dinner",
+    "greenfileName": "bath",
+    "greenframeNumber": 95,
+    "greenfolderName": "MacarthurBates/bath",
+    "greenImageName": "WordIcons/bath",
+    "redfileName": "shower",
+    "redframeNumber": 54,
+    "redfolderName": "MacarthurBates/shower",
+    "redImageName": "WordIcons/shower",
+    "violetfileName": "bucket",
+    "violetframeNumber": 59,
+    "violetfolderName": "MacarthurBates/bucket",
+    "violetImageName": "WordIcons/bucket",
+    "yellowfileName": "knife",
+    "yellowframeNumber": 69,
+    "yellowfolderName": "MacarthurBates/knife",
+    "yellowImageName": "WordIcons/knife"
+}

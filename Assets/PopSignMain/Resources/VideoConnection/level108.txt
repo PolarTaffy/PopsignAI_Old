@@ -1,0 +1,22 @@
+{
+    "bluefileName": "hammer",
+    "blueframeNumber": 59,
+    "bluefolderName": "MacarthurBates/hammer",
+    "blueImageName": "WordIcons/hammer",
+    "greenfileName": "build",
+    "greenframeNumber": 152,
+    "greenfolderName": "MacarthurBates/build",
+    "greenImageName": "WordIcons/build",
+    "redfileName": "glasswindow",
+    "redframeNumber": 92,
+    "redfolderName": "MacarthurBates/glasswindow",
+    "redImageName": "WordIcons/glasswindow",
+    "violetfileName": "ladder",
+    "violetframeNumber": 53,
+    "violetfolderName": "MacarthurBates/ladder",
+    "violetImageName": "WordIcons/ladder",
+    "yellowfileName": "lamp",
+    "yellowframeNumber": 83,
+    "yellowfolderName": "MacarthurBates/lamp",
+    "yellowImageName": "WordIcons/lamp"
+}

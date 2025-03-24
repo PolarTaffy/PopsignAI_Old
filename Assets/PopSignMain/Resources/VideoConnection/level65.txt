@@ -1,0 +1,22 @@
+{
+    "bluefileName": "think",
+    "blueframeNumber": 50,
+    "bluefolderName": "MacarthurBates/think",
+    "blueImageName": "WordIcons/think",
+    "greenfileName": "finish",
+    "greenframeNumber": 46,
+    "greenfolderName": "MacarthurBates/finish",
+    "greenImageName": "WordIcons/finish",
+    "redfileName": "airplane",
+    "redframeNumber": 56,
+    "redfolderName": "MacarthurBates/airplane",
+    "redImageName": "WordIcons/airplane",
+    "violetfileName": "same",
+    "violetframeNumber": 53,
+    "violetfolderName": "MacarthurBates/same",
+    "violetImageName": "WordIcons/same",
+    "yellowfileName": "pretend",
+    "yellowframeNumber": 54,
+    "yellowfolderName": "MacarthurBates/pretend",
+    "yellowImageName": "WordIcons/pretend"
+}

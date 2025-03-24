@@ -1,0 +1,22 @@
+{
+    "bluefileName": "high",
+    "blueframeNumber": 97,
+    "bluefolderName": "MacarthurBates/high",
+    "blueImageName": "WordIcons/high",
+    "greenfileName": "off",
+    "greenframeNumber": 44,
+    "greenfolderName": "MacarthurBates/off",
+    "greenImageName": "WordIcons/off",
+    "redfileName": "insidein",
+    "redframeNumber": 50,
+    "redfolderName": "MacarthurBates/insidein",
+    "redImageName": "WordIcons/insidein",
+    "violetfileName": "up",
+    "violetframeNumber": 41,
+    "violetfolderName": "MacarthurBates/up",
+    "violetImageName": "WordIcons/up",
+    "yellowfileName": "minemy",
+    "yellowframeNumber": 44,
+    "yellowfolderName": "MacarthurBates/minemy",
+    "yellowImageName": "WordIcons/minemy"
+}

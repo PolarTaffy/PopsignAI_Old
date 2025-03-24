@@ -1,0 +1,22 @@
+{
+    "bluefileName": "aunt",
+    "blueframeNumber": 60,
+    "bluefolderName": "MacarthurBates/aunt",
+    "blueImageName": "WordIcons/aunt",
+    "greenfileName": "grandma",
+    "greenframeNumber": 56,
+    "greenfolderName": "MacarthurBates/grandma",
+    "greenImageName": "WordIcons/grandma",
+    "redfileName": "mailman",
+    "redframeNumber": 76,
+    "redfolderName": "MacarthurBates/mailman",
+    "redImageName": "WordIcons/mailman",
+    "violetfileName": "uncle",
+    "violetframeNumber": 64,
+    "violetfolderName": "MacarthurBates/uncle",
+    "violetImageName": "WordIcons/uncle",
+    "yellowfileName": "trytryto",
+    "yellowframeNumber": 102,
+    "yellowfolderName": "MacarthurBates/trytryto",
+    "yellowImageName": "WordIcons/trytryto"
+}
