@@ -66,12 +66,19 @@ crashlytics-build.properties
 # Packed Addressables
 /[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/*/*.bin*
 
+#MediaPipe
+/[Aa]ssets/MediaPipeUnity*
+/[Pp]ackages/com.github.homuler.mediapipe*
+
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 
 # Mac files
 .DS_Store
+
+# VSCode Generated Dirs
+.vscode/*
 
 # Large Files
 Packages/com.github.homuler.mediapipe/Runtime/Plugins/Android/mediapipe_android.aar
