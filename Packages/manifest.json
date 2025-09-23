@@ -16,6 +16,7 @@
     }
   ],
   "dependencies": {
+"com.github.asus4.tflite": "2.19.0-p3",
     "com.google.external-dependency-manager": "https://github.com/googlesamples/unity-jar-resolver.git?path=upm",
     "com.unity.2d.sprite": "1.0.0",
     "com.unity.2d.tilemap": "1.0.0",

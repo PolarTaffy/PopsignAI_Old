@@ -1,5 +1,21 @@
 {
   "dependencies": {
+    "com.github.asus4.tflite": {
+      "version": "2.19.0-p3",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://registry.npmjs.com"
+    },
+    "com.github.homuler.mediapipe": {
+      "version": "file:com.github.homuler.mediapipe",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {
+        "com.unity.ugui": "1.0.0",
+        "com.unity.test-framework": "1.0.0"
+      }
+    },
     "com.google.external-dependency-manager": {
       "version": "https://github.com/googlesamples/unity-jar-resolver.git?path=upm",
       "depth": 0,
