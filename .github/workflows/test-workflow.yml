@@ -1,11 +1,11 @@
 ---
-name: mobile_builds_MacOS
+name: MacMini_Runner
 on: [push, fork, workflow_dispatch]
 #build everytime the repo is forked or pushed to
 permissions: read-all
 jobs:
     test:
-        runs-on: self-hosted
+        runs-on: [self-hosted, macOS]
         steps:
           - name: Print Env Info
             run: |
