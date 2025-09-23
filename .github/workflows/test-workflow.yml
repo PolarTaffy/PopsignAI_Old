@@ -1,0 +1,15 @@
+---
+name: mobile_builds_MacOS
+on: [push, fork, workflow_dispatch]
+#build everytime the repo is forked or pushed to
+permissions: read-all
+jobs:
+    test:
+        runs-on: self-hosted
+        steps:
+          - name: Print Env Info
+            run: |
+                echo "Hi! This should be running on the Mac Mini."
+                echo "OS: $(uname -a)"
+                echo "Working directory: $(pwd)"
+...
