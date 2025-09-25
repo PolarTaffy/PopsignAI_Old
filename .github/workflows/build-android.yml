@@ -22,13 +22,22 @@ jobs:
                 -executeMethod PopsignAIBuilder.BuildGameAndroid \
                 -logFile build.log
 
+          - name: Activate Unity License
+            run: |
+                /Applications/Unity/Hub/Editor/6000.0.26f1/Unity.app/Contents/MacOS/Unity \
+                  -batchmode \
+                  -quit \
+                  -logFile - \
+                  -username "${{ secrets.UNITY_EMAIL }}" \
+                  -password "${{ secrets.UNITY_PASSWORD }}" \
+                  -serial "${{ secrets.UNITY_SERIAL }}"
+
           - name: See All Files
             run: ls -R
             shell: bash
 
             #MANAGE BUILD ERRORS        
-          - name: Upload Build Log (If Failed)
-            if: failure()
+          - name: Upload Build Log
             uses: actions/upload-artifact@v4
             with:
               name: build-log-android
