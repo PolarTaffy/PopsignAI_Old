@@ -6,9 +6,7 @@ permissions:
 jobs:
     build-android:
         runs-on: [self-hosted, macOS]
-        #TODO: Make step for actually building the app (1)
         #TODO: Make step for putting it on the android phone with ADB (3/4)
-        #TODO:
         steps:
           - name: Checkout repository
             uses: actions/checkout@v4
