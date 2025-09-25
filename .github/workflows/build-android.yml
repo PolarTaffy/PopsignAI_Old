@@ -12,15 +12,6 @@ jobs:
         steps:
           - name: Checkout repository
             uses: actions/checkout@v4
-            
-          - name: Build Android with Unity
-            run: |
-                /Applications/Unity/Hub/Editor/6000.0.26f1/Unity.app/Contents/MacOS/Unity \
-                -batchmode \
-                -quit \
-                -projectPath "${{ github.workspace }}" \
-                -executeMethod PopsignAIBuilder.BuildGameAndroid \
-                -logFile build.log
 
           - name: Activate Unity License
             run: |
@@ -31,6 +22,15 @@ jobs:
                   -username "${{ secrets.UNITY_EMAIL }}" \
                   -password "${{ secrets.UNITY_PASSWORD }}" \
                   -serial "${{ secrets.UNITY_SERIAL }}"
+            
+          - name: Build Android with Unity
+            run: |
+                /Applications/Unity/Hub/Editor/6000.0.26f1/Unity.app/Contents/MacOS/Unity \
+                -batchmode \
+                -quit \
+                -projectPath "${{ github.workspace }}" \
+                -executeMethod PopsignAIBuilder.BuildGameAndroid \
+                -logFile build.log
 
           - name: See All Files
             run: ls -R
