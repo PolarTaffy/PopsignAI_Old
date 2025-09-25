@@ -30,7 +30,7 @@ jobs:
                 -quit \
                 -projectPath "${{ github.workspace }}" \
                 -executeMethod PopsignAIBuilder.BuildGameAndroid \
-                -logFile build.log
+                -logFile -
 
           - name: See All Files
             run: ls -R
