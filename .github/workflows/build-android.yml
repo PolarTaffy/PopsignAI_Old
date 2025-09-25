@@ -14,12 +14,10 @@ jobs:
             
           - name: Build Android with Unity
             run: |
-                PROJECT_PATH="$GITHUB_WORKSPACE"
-                UNITY_PATH="/Applications/Unity/Hub/Editor/6000.0.26f1/Unity.app/Contents/MacOS/Unity"
-                $UNITY_PATH \
+                /Applications/Unity/Hub/Editor/6000.0.26f1/Unity.app/Contents/MacOS/Unity \
                 -batchmode \
                 -quit \
-                -projectPath "$PROJECT_PATH" \
+                -projectPath . \
                 -executeMethod PopsignAIBuilder.BuildGameAndroid \
                 -logFile build.log
 
