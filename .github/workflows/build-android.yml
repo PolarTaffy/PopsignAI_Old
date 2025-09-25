@@ -1,7 +1,8 @@
 ---
 name: Build and Release on Mobile
 on: [push, fork, workflow_dispatch]
-# permissions: [read-all]
+permissions:
+    contents: write
 jobs:
     build-android:
         runs-on: [self-hosted, macOS]
@@ -9,24 +10,23 @@ jobs:
         #TODO: Make step for putting it on the android phone with ADB (3/4)
         #TODO:
         steps:
-          - name: Upload APK to GitHub Release
-            run: |
-                APK_ARM64_PATH = "Build/Android/PopSignAI.arm64-v8a.apk"
-                APK_ARMEABI_PATH = "Build/Android/PopSignAI.armeabi-v7a.apk"
+        #   - name: Upload APK to GitHub Release
+        #     run: |
+        #         APK_ARM64_PATH = "Build/Android/PopSignAI.arm64-v8a.apk"
+        #         APK_ARMEABI_PATH = "Build/Android/PopSignAI.armeabi-v7a.apk"
           - name: Create Release
-            id: create_release
-            uses: comnoco/create-release@v2
+            uses: softprops/action-gh-release@v2
+            with:
+                files: |
+                    Build/Android/PopSignAI.arm64-v8a.apk
+                    Build/Android/PopSignAI.armeabi-v7a.apk
+                tag_name: 1.0.0
+                token: ${{ secrets.GITHUB_TOKEN }}
             env:
                 GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-            with:
-                tag_name: 1.0.0
-                release_name: Demo Release
-                body: |
-                    Evan is super awesome and cool
-                    This is PopSign
-                draft: false
-                prerelease: false
-
-
-
+            
+          - name: Deploy to Android Device
+            run: | 
+                echo "It's Honey-G"
+            
 ...
