@@ -11,6 +11,8 @@ jobs:
         #TODO:
         steps:
         #   i'm avoiding checking out the commit at all rn because i don't remember if i added those two dependencies to the repo
+          - name: Checkout repository
+            uses: actions/checkout@v4
             
           - name: Build Android with Unity
             run: |
