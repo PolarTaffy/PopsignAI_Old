@@ -1,6 +1,9 @@
 ---
 name: Build and Release on Mobile
-on: [push, fork, workflow_dispatch]
+on: [push, workflow_dispatch]
+env:
+  RUNNER_TOOL_CACHE: ${{ github.workspace }}/.toolcache
+  RUNNER_TEMP: ${{ github.workspace }}/_temp
 permissions:
     contents: write
 jobs:
@@ -10,15 +13,16 @@ jobs:
         - name: Checkout repository
           uses: actions/checkout@v4
 
-        - name: Install Python
-          uses: actions/setup-python@v5
-          with:
-            python-version: "3.11"
-            # cache: 'pip' #cache pip dependencies
+        - name: Homebrew Python
+          run: |
+            brew update
+            arch -arm64 brew install python || true
+            python3 --version
+            pip3 --version
         
         - name: Config SLRTK
           run: |
-            pip install slrtk
+            pip3 install slrtk
             echo "Python libs installed"
             slrtk gtk install --unity --path .
 
@@ -27,7 +31,7 @@ jobs:
               /Applications/Unity/Hub/Editor/6000.0.26f1/Unity.app/Contents/MacOS/Unity \
                 -batchmode \
                 -quit \
-                -logFile - \
+                -logFile build.log \
                 -username "${{ secrets.UNITY_EMAIL }}" \
                 -password "${{ secrets.UNITY_PASSWORD }}" \
                 -serial "${{ secrets.UNITY_SERIAL }}"
@@ -62,7 +66,7 @@ jobs:
             with:
                 files: |
                     Build/Android/*.apk
-                tag_name: 1.0.0
+                tag_name: release-${{ github.run_number }}-${{ github.sha }}
                 token: ${{ secrets.GITHUB_TOKEN }}
             env:
                 GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
