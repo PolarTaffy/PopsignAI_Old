@@ -1,0 +1,58 @@
+---
+name: Build and Release on Mobile
+on: [push, fork, workflow_dispatch]
+permissions:
+    contents: write
+jobs:
+    build-android:
+        runs-on: [self-hosted, macOS]
+        #TODO: Make step for putting it on the android phone with ADB (3/4)
+        steps:
+          - name: Checkout repository
+            uses: actions/checkout@v4
+
+          - name: Activate Unity License
+            run: |
+                /Applications/Unity/Hub/Editor/6000.0.26f1/Unity.app/Contents/MacOS/Unity \
+                  -batchmode \
+                  -quit \
+                  -logFile - \
+                  -username "${{ secrets.UNITY_EMAIL }}" \
+                  -password "${{ secrets.UNITY_PASSWORD }}" \
+                  -serial "${{ secrets.UNITY_SERIAL }}"
+            
+          - name: Build Android with Unity
+            run: |
+                /Applications/Unity/Hub/Editor/6000.0.26f1/Unity.app/Contents/MacOS/Unity \
+                -batchmode \
+                -quit \
+                -projectPath "${{ github.workspace }}" \
+                -executeMethod PopsignAIBuilder.BuildGameAndroid \
+                -logFile -
+
+          - name: See All Files
+            run: ls -R
+            shell: bash
+
+            #MANAGE BUILD ERRORS        
+          - name: Upload Build Log
+            uses: actions/upload-artifact@v4
+            with:
+              name: build-log-android
+              path: build.log
+
+          - name: Create Release
+            uses: softprops/action-gh-release@v2
+            with:
+                files: |
+                    Build/Android/*.apk
+                tag_name: 1.0.1
+                token: ${{ secrets.GITHUB_TOKEN }}
+            env:
+                GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            
+          - name: Deploy to Android Device
+            run: | 
+                echo "It's Honey-G"
+            
+...
