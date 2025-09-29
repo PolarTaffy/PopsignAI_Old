@@ -4,23 +4,39 @@ on: [push, fork, workflow_dispatch]
 permissions:
     contents: write
 jobs:
+    setup:
+      runs-on: [self-hosted, macOS]
+      steps:
+        - name: Checkout repository
+          uses: actions/checkout@v4
+
+        - name: Install Python
+          uses: actions/setup-python@v5
+          with:
+            python-version: "3.11"
+            # cache: 'pip' #cache pip dependencies
+        
+        - name: Config SLRTK
+          run: |
+            pip install slrtk
+            echo "Python libs installed"
+            slrtk gtk install --unity --path .
+
+        - name: Activate Unity License
+          run: |
+              /Applications/Unity/Hub/Editor/6000.0.26f1/Unity.app/Contents/MacOS/Unity \
+                -batchmode \
+                -quit \
+                -logFile - \
+                -username "${{ secrets.UNITY_EMAIL }}" \
+                -password "${{ secrets.UNITY_PASSWORD }}" \
+                -serial "${{ secrets.UNITY_SERIAL }}"
+
     build-android:
         runs-on: [self-hosted, macOS]
+        needs: setup
         #TODO: Make step for putting it on the android phone with ADB (3/4)
         steps:
-          - name: Checkout repository
-            uses: actions/checkout@v4
-
-          - name: Activate Unity License
-            run: |
-                /Applications/Unity/Hub/Editor/6000.0.26f1/Unity.app/Contents/MacOS/Unity \
-                  -batchmode \
-                  -quit \
-                  -logFile - \
-                  -username "${{ secrets.UNITY_EMAIL }}" \
-                  -password "${{ secrets.UNITY_PASSWORD }}" \
-                  -serial "${{ secrets.UNITY_SERIAL }}"
-            
           - name: Build Android with Unity
             run: |
                 /Applications/Unity/Hub/Editor/6000.0.26f1/Unity.app/Contents/MacOS/Unity \
@@ -46,7 +62,7 @@ jobs:
             with:
                 files: |
                     Build/Android/*.apk
-                tag_name: 1.0.1
+                tag_name: 1.0.0
                 token: ${{ secrets.GITHUB_TOKEN }}
             env:
                 GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -54,5 +70,9 @@ jobs:
           - name: Deploy to Android Device
             run: | 
                 echo "It's Honey-G"
+
+
+    #TODO move the create android release to its own job where it releases both android and ios at the same time
+    #it'll be like... make release
             
 ...

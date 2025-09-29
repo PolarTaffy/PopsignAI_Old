@@ -25,6 +25,7 @@
 
 # Visual Studio cache directory
 .vs/
+.vscode/
 
 # Gradle cache directory
 .gradle/
@@ -71,7 +72,10 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 
 # Mac files
-.DS_Store
+**/.DS_Store
+
+# SLR-GTk Imports
+/[Aa]ssets/SLR-GTk/
 
 # Large Files
 Packages/com.github.homuler.mediapipe/Runtime/Plugins/Android/mediapipe_android.aar
