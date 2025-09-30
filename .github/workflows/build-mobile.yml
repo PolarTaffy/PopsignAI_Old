@@ -50,10 +50,6 @@ jobs:
                 -executeMethod PopsignAIBuilder.BuildGameAndroid \
                 -logFile -
 
-          - name: See All Files
-            run: ls -R
-            shell: bash
-
             #MANAGE BUILD ERRORS        
           - name: Upload Build Log
             uses: actions/upload-artifact@v4
@@ -75,7 +71,78 @@ jobs:
             run: | 
                 echo "It's Honey-G"
 
+    build-ios:
+      runs-on: [self-hosted, macOS]
+      needs: setup
+      steps:
+        - name: Build iOS Workspace
+          run: |
+            /Applications/Unity/Hub/Editor/6000.0.26f1/Unity.app/Contents/MacOS/Unity \
+              -batchmode \
+              -quit \
+              -projectPath "${{ github.workspace }}" \
+              -executeMethod PopsignAIBuilder.BuildGameiOS \
+              -logFile -
 
+        - name: Build iOS Publishing Archive
+          run: |
+            /Applications/Unity/Hub/Editor/6000.0.26f1/Unity.app/Contents/MacOS/Unity \
+              -batchmode \
+              -quit \
+              -projectPath "${{ github.workspace }}" \
+              -executeMethod PopsignAIBuilder.BuildArchiveiOS \
+              -logFile -
+
+        - name: Export iOS Publishing Package
+          run: |
+            /Applications/Unity/Hub/Editor/6000.0.26f1/Unity.app/Contents/MacOS/Unity \
+              -batchmode \
+              -quit \
+              -projectPath "${{ github.workspace }}" \
+              -executeMethod PopsignAIBuilder.ExportGameiOS \
+              -logFile -
+        
+        - name: Generate iOS Publishing Manifest
+          run: |
+            /Applications/Unity/Hub/Editor/6000.0.26f1/Unity.app/Contents/MacOS/Unity \
+              -batchmode \
+              -quit \
+              -projectPath "${{ github.workspace }}" \
+              -executeMethod PopsignAIBuilder.GenerateiOSManifest \
+              -logFile -
+
+        - name: Upload Build Log
+          uses: actions/upload-artifact@v4
+          with:
+            name: build-log-ios
+            path: build-ios.log
+
+        - name: Create Release
+          uses: softprops/action-gh-release@v2
+          with:
+              files: |
+                  Build/iOS/PopsignAI/*.ipa
+              tag_name: release-${{ github.run_number }}-${{ github.sha }}
+              token: ${{ secrets.GITHUB_TOKEN }}
+          env:
+              GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          
+    release-files: 
+      runs-on: [self-hosted, macOS]
+      needs: [build-android, build-ios]
+      steps: 
+
+        - name: Create Release
+          uses: softprops/action-gh-release@v2
+          with:
+              files: |
+                  Build/iOS/PopsignAI/*.ipa
+                  Build/Android/*.apk
+              tag_name: BOTH-release-${{ github.run_number }}-${{ github.sha }}
+              token: ${{ secrets.GITHUB_TOKEN }}
+          env:
+              GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      
     #TODO move the create android release to its own job where it releases both android and ios at the same time
     #it'll be like... make release
             
