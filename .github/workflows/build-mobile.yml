@@ -56,6 +56,15 @@ jobs:
             name: build-log-ios
             path: iosWorkspace.log
 
+        - name: Build iOS Workspace
+          run: |
+            /Applications/Unity/Hub/Editor/6000.0.26f1/Unity.app/Contents/MacOS/Unity \
+              -batchmode \
+              -quit \
+              -projectPath "${{ github.workspace }}" \
+              -executeMethod PopsignAIBuilder.BuildGameiOS \
+              -logFile iosWorkspace.log
+
         - name: DEBUG List all workplace files
           run: ls -R > listing_after_wkspc.txt
 
@@ -137,6 +146,7 @@ jobs:
                   Build/iOS/PopsignAI/*.ipa
                   Build/Android/*.apk
                   Build/.iOS-Workspace/*.xcodeproj
+                  Build/.iOS-Workspace/*.xarchive
               tag_name: BOTH-release-${{ github.run_number }}
               token: ${{ secrets.GITHUB_TOKEN }}
           env:
