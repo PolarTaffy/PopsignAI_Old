@@ -98,35 +98,36 @@ jobs:
         #     name: build-log-ios
         #     path: build-ios.log
 
-    build-android:
-        runs-on: [self-hosted, macOS]
-        needs: setup
-        #TODO: Make step for putting it on the android phone with ADB (3/4)
-        steps:
-          - name: Build Android with Unity
-            run: |
-                /Applications/Unity/Hub/Editor/6000.0.26f1/Unity.app/Contents/MacOS/Unity \
-                -batchmode \
-                -quit \
-                -projectPath "${{ github.workspace }}" \
-                -executeMethod PopsignAIBuilder.BuildGameAndroid \
-                -logFile -
+    # build-android:
+    #     runs-on: [self-hosted, macOS]
+    #     needs: setup
+    #     #TODO: Make step for putting it on the android phone with ADB (3/4)
+    #     steps:
+    #       - name: Build Android with Unity
+    #         run: |
+    #             /Applications/Unity/Hub/Editor/6000.0.26f1/Unity.app/Contents/MacOS/Unity \
+    #             -batchmode \
+    #             -quit \
+    #             -projectPath "${{ github.workspace }}" \
+    #             -executeMethod PopsignAIBuilder.BuildGameAndroid \
+    #             -logFile -
 
-            #MANAGE BUILD ERRORS        
-          - name: Upload Build Log
-            uses: actions/upload-artifact@v4
-            with:
-              name: build-log-android
-              path: build.log
+    #         #MANAGE BUILD ERRORS        
+    #       - name: Upload Build Log
+    #         uses: actions/upload-artifact@v4
+    #         with:
+    #           name: build-log-android
+    #           path: build.log
             
-          - name: Deploy to Android Device
-            run: | 
-                echo "It's Honey-G"
+    #       - name: Deploy to Android Device
+    #         run: | 
+    #             echo "It's Honey-G"
 
 
     release-files: 
       runs-on: [self-hosted, macOS]
-      needs: [build-android, build-ios]
+      needs: [build-ios]
+      # needs: [build-android, build-ios]
       steps: 
 
         - name: Create Release
