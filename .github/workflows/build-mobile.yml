@@ -48,7 +48,22 @@ jobs:
               -quit \
               -projectPath "${{ github.workspace }}" \
               -executeMethod PopsignAIBuilder.BuildGameiOS \
-              -logFile -
+              -logFile iosWorkspace.log
+
+        - name: Upload Build Log
+          uses: actions/upload-artifact@v4
+          with:
+            name: build-log-ios
+            path: iosWorkspace.log
+
+        - name: DEBUG List all workplace files
+          run: ls -R > listing_after_wkspc.txt
+
+        - name: Upload Workplace Files
+          uses: actions/upload-artifact@v4
+          with:
+            name: dirs-after-ios-work
+            path: listing_after_wkspc.txt
 
         # - name: Build iOS Publishing Archive
         #   run: |
@@ -120,7 +135,7 @@ jobs:
               files: |
                   Build/iOS/PopsignAI/*.ipa
                   Build/Android/*.apk
-                  Build/.iOS-Workspace/Unity-iPhone.xcodeproj
+                  Build/.iOS-Workspace/*.xcodeproj
               tag_name: BOTH-release-${{ github.run_number }}
               token: ${{ secrets.GITHUB_TOKEN }}
           env:
