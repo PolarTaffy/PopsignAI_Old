@@ -70,7 +70,7 @@ jobs:
           uses: actions/upload-artifact@v4
           with:
             name: build-output
-            path: Build/
+            path: ./Build/
 
         # - name: Build iOS Publishing Archive
         #   run: |
@@ -141,7 +141,7 @@ jobs:
           uses: actions/download-artifact@v4
           with:
             name: build-output
-            path: Build/
+            path: ./Build/
 
         - name: Create Release
           uses: softprops/action-gh-release@v2
