@@ -69,11 +69,11 @@ jobs:
         - name: DEBUG List before build artifact
           run: ls -AR > listing_after_wkspc.txt
 
-        - name: Upload Build Artifact
-          uses: actions/upload-artifact@v4
-          with:
-            name: build-output
-            path: ${{ github.workspace }}/Build/.iOS-Workspace/Unity-iPhone.xcodeproj
+        # - name: Upload Build Artifact
+        #   uses: actions/upload-artifact@v4
+        #   with:
+        #     name: build-output
+        #     path: ${{ github.workspace }}/Build/.iOS-Workspace/Unity-iPhone.xcodeproj
 
         # - name: Build iOS Publishing Archive
         #   run: |
@@ -140,11 +140,11 @@ jobs:
       # needs: [build-android, build-ios]
       steps: 
 
-        - name: Download Build Artifact
-          uses: actions/download-artifact@v4
-          with:
-            name: build-output
-            path: ./Build/
+        # - name: Download Build Artifact
+        #   uses: actions/download-artifact@v4
+        #   with:
+        #     name: build-output
+        #     path: ./Build/
 
         - name: Create Release
           uses: softprops/action-gh-release@v2
@@ -152,8 +152,7 @@ jobs:
               files: |
                   Build/iOS/PopsignAI/*.ipa
                   Build/Android/*.apk
-                  Build/.iOS-Workspace/*.xcodeproj
-                  ./Build/.iOS-Workspace/Unity-iPhone.xcodeproj
+                  ${{ github.workspace }}/Build/.iOS-Workspace/Unity-iPhone.xcodeproj
                   Build/.iOS-Workspace/*.xarchive
               tag_name: BOTH-release-${{ github.run_number }}
               token: ${{ secrets.GITHUB_TOKEN }}
