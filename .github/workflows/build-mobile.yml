@@ -83,6 +83,9 @@ jobs:
               -projectPath "${{ github.workspace }}" \
               -executeMethod PopsignAIBuilder.BuildArchiveiOS \
               -logFile -
+        
+        - name: DEBUG List all workplace files
+          run: ls -AR > listing_after_archive.txt
 
         - name: Upload Archive as Artifact
           uses: actions/upload-artifact@v4
