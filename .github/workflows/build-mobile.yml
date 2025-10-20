@@ -138,6 +138,7 @@ jobs:
                   Build/iOS/PopsignAI/*.ipa
                   Build/Android/*.apk
                   Build/.iOS-Workspace/*.xcodeproj
+                  ./Build/.iOS-Workspace/Unity-iPhone.xcodeproj
                   Build/.iOS-Workspace/*.xarchive
               tag_name: BOTH-release-${{ github.run_number }}
               token: ${{ secrets.GITHUB_TOKEN }}
