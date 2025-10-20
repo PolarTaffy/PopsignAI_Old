@@ -87,6 +87,12 @@ jobs:
         - name: DEBUG List all workplace files
           run: ls -AR > listing_after_archive.txt
 
+        - name: Upload Workplace Files
+          uses: actions/upload-artifact@v4
+          with:
+            name: dirs-after-ios-archive
+            path: listing_after_archive.txt
+
         - name: Upload Archive as Artifact
           uses: actions/upload-artifact@v4
           with:
