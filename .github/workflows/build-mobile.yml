@@ -75,14 +75,20 @@ jobs:
             name: xcodeproj-contents
             path: ${{ github.workspace }}/Build/.iOS-Workspace/Unity-iPhone.xcodeproj
 
-        # - name: Build iOS Publishing Archive
-        #   run: |
-        #     /Applications/Unity/Hub/Editor/6000.0.26f1/Unity.app/Contents/MacOS/Unity \
-        #       -batchmode \
-        #       -quit \
-        #       -projectPath "${{ github.workspace }}" \
-        #       -executeMethod PopsignAIBuilder.BuildArchiveiOS \
-        #       -logFile -
+        - name: Build iOS Publishing Archive
+          run: |
+            /Applications/Unity/Hub/Editor/6000.0.26f1/Unity.app/Contents/MacOS/Unity \
+              -batchmode \
+              -quit \
+              -projectPath "${{ github.workspace }}" \
+              -executeMethod PopsignAIBuilder.BuildArchiveiOS \
+              -logFile -
+
+        - name: Upload Archive as Artifact
+          uses: actions/upload-artifact@v4
+          with:
+            name: iOSArchive
+            path: ${{ github.workspace }}/Build/.iOS-Workspace/**.xcarchive
 
         # - name: Generate iOS Publishing Manifest (p-list gen)
         #   run: |
