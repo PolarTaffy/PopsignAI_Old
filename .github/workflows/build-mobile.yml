@@ -73,7 +73,7 @@ jobs:
           uses: actions/upload-artifact@v4
           with:
             name: build-output
-            path: ${{ github.workspace }}/PopsignAI_Old/Build/.iOS-Workspace/*
+            path: ${{ github.workspace }}/Build/.iOS-Workspace/*
 
         # - name: Build iOS Publishing Archive
         #   run: |
