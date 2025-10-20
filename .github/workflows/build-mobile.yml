@@ -66,6 +66,12 @@ jobs:
             name: dirs-after-ios-work
             path: listing_after_wkspc.txt
 
+        - name: Upload Build Artifact
+          uses: actions/upload-artifact@v4
+          with:
+            name: build-output
+            path: Build/
+
         # - name: Build iOS Publishing Archive
         #   run: |
         #     /Applications/Unity/Hub/Editor/6000.0.26f1/Unity.app/Contents/MacOS/Unity \
@@ -130,6 +136,12 @@ jobs:
       needs: [build-ios]
       # needs: [build-android, build-ios]
       steps: 
+
+        - name: Download Build Artifact
+          uses: actions/download-artifact@v4
+          with:
+            name: build-output
+            path: Build/
 
         - name: Create Release
           uses: softprops/action-gh-release@v2
