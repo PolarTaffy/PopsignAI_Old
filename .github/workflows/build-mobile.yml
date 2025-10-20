@@ -57,17 +57,8 @@ jobs:
             name: build-log-ios
             path: iosWorkspace.log
 
-        - name: Build iOS Workspace
-          run: |
-            /Applications/Unity/Hub/Editor/6000.0.26f1/Unity.app/Contents/MacOS/Unity \
-              -batchmode \
-              -quit \
-              -projectPath "${{ github.workspace }}" \
-              -executeMethod PopsignAIBuilder.BuildGameiOS \
-              -logFile iosWorkspace.log
-
         - name: DEBUG List all workplace files
-          run: ls -R > listing_after_wkspc.txt
+          run: ls -AR > listing_after_wkspc.txt
 
         - name: Upload Workplace Files
           uses: actions/upload-artifact@v4
