@@ -19,6 +19,7 @@ jobs:
             arch -arm64 brew install python || true
             python3 --version
             pip3 --version
+            brew install cocoapods
         
         - name: Config SLRTK
           run: |
