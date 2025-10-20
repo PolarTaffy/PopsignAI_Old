@@ -66,11 +66,14 @@ jobs:
             name: dirs-after-ios-work
             path: listing_after_wkspc.txt
 
+        - name: DEBUG List before build artifact
+          run: ls -AR > listing_after_wkspc.txt
+
         - name: Upload Build Artifact
           uses: actions/upload-artifact@v4
           with:
             name: build-output
-            path: ./Build/
+            path: Build/**/*
 
         # - name: Build iOS Publishing Archive
         #   run: |
