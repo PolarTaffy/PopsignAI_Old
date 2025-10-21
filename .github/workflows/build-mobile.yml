@@ -115,7 +115,7 @@ jobs:
               -exportOptionsPlist "$EXPORT_OPTIONS_PLIST"
 
         - name: DEBUG List all workplace files
-          run: ls -AR > listing_after_gen.txt
+          run: ls -AR > listing_after_ipa.txt
 
         - name: Upload Workplace Files
           uses: actions/upload-artifact@v4
