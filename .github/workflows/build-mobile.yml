@@ -118,11 +118,12 @@ jobs:
         - name: build archive
           run: |
             xcodebuild \
-            -scheme "Unity-iPhone" \
-            -archivePath ${{ github.workspace }}/Build/.iOS-Workspace/Unity-iPhone.xcarchive \
-            -configuration Debug \
-            -destination generic/platform=iOS \
-            clean archive
+              -project "${{ github.workspace }}/Build/.iOS-Workspace/Unity-iPhone.xcodeproj" \
+              -scheme "Unity-iPhone" \
+              -configuration Debug \
+              -archivePath "${{ github.workspace }}/Build/.iOS-Workspace/Unity-iPhone.xcarchive" \
+              -destination "generic/platform=iOS" \
+              clean archive
 
           #todo: run xcodebuild build in the xcodeproj folder (needs provisioning profile) 
           #provision profile uuid: ca70b8c2-507e-42bc-a0bb-716609752488 
