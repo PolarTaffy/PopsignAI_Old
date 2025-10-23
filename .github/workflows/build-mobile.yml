@@ -118,7 +118,7 @@ jobs:
         - name: build archive
           run: |
             xcodebuild \
-            -scheme "Unity-iPhone"\
+            -scheme "Unity-iPhone" \
             -archivePath ${{ github.workspace }}/Build/.iOS-Workspace/Unity-iPhone.xcarchive \
             -configuration Debug \
             -destination generic/platform=iOS \
