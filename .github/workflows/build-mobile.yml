@@ -13,11 +13,11 @@ jobs:
         - name: Checkout repository
           uses: actions/checkout@v4
 
-        - name: Homebrew Python
+        - name: Install Python & Cocoapods via Homebrew
           run: |
             brew update
             arch -arm64 brew install python || true
-            python3 --version
+            python3 --version 
             pip3 --version
             brew install cocoapods
         
@@ -37,7 +37,24 @@ jobs:
                 -password "${{ secrets.UNITY_PASSWORD }}" \
                 -serial "${{ secrets.UNITY_SERIAL }}"
 
-    
+        - name: Import Code Signing Certificate
+          uses: apple-actions/import-codesign-certs@v3
+          with: 
+            p12-file-base64: ${{ secrets.BUILD_CERTIFICATE_BASE64 }}
+            p12-password: ${{ secrets.P12_PASSWORD }}
+
+        - name: 3. Install Provisioning Profile
+          env:
+            PROVISIONING_PROFILE_BASE64: ${{ secrets.BUILD_PROVISION_PROFILE_BASE64 }}
+          run: |
+            # Create a temporary file for the profile
+            PROFILE_PATH=~/Library/MobileDevice/Provisioning\ Profiles/temp.mobileprovision
+            mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
+            
+            # Decode the secret and save it to the file
+            echo "$PROVISIONING_PROFILE_BASE64" | base64 --decode > $PROFILE_PATH
+            echo "Installed provisioning profile."
+
     build-ios:
       runs-on: [self-hosted, macOS]
       needs: setup
@@ -51,77 +68,77 @@ jobs:
               -executeMethod PopsignAIBuilder.BuildGameiOS \
               -logFile iosWorkspace.log
 
-        - name: Upload Build Log
-          uses: actions/upload-artifact@v4
-          with:
-            name: build-log-ios
-            path: iosWorkspace.log
-
-        - name: DEBUG List all workplace files
-          run: ls -AR > listing_after_wkspc.txt
-
-        - name: Upload Workplace Files
-          uses: actions/upload-artifact@v4
-          with:
-            name: dirs-after-ios-work
-            path: listing_after_wkspc.txt
-
-        - name: DEBUG List before build artifact
-          run: ls -AR > listing_after_wkspc.txt
-
-        - name: Upload Build Artifact
+        - name: Upload xcodeproj as artifact
           uses: actions/upload-artifact@v4
           with:
             name: xcodeproj-contents
             path: ${{ github.workspace }}/Build/.iOS-Workspace/Unity-iPhone.xcodeproj
-
-        - name: Build and Sign .ipa
-          run: |
-            # Define paths for clarity
-            WORKSPACE_PATH="${{ github.workspace }}/Build/.iOS-Workspace/Unity-iPhone.xcworkspace"
-            ARCHIVE_PATH="${{ github.workspace }}/Build/iOS/PopsignAI.xcarchive"
-            EXPORT_PATH="${{ github.workspace }}/Build/iOS/"
-            EXPORT_OPTIONS_PLIST="${{ github.workspace }}/ExportOptions.plist"
-
-            echo ">>> Creating ExportOptions.plist"
-            cat << EOF > $EXPORT_OPTIONS_PLIST
-            <?xml version="1.0" encoding="UTF-8"?>
-            <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-            <plist version="1.0">
-            <dict>
-                <key>method</key>
-                <string>development</string>
-                <key>teamID</key>
-                <string>${{ secrets.APPLE_TEAM_ID }}</string>
-                <key>signingStyle</key>
-                <string>automatic</string>
-            </dict>
-            </plist>
             
-            echo ">>> Archiving the project..."
-            xcodebuild archive \
-              -workspace "$WORKSPACE_PATH" \
-              -scheme "Unity-iPhone" \
-              -sdk iphoneos \
-              -configuration "Release" \
-              -archivePath "$ARCHIVE_PATH" \
-              -allowProvisioningUpdates \
-              DEVELOPMENT_TEAM="${{ secrets.APPLE_TEAM_ID }}"
+        - name: Build the Archive
+          run: |
+            xcodebuild archive
+              \-project ${{ github.workspace }}/Build/.iOS-Workspace/Unity-iPhone.xcodeproj
+              \-configuration Release
+              \-destination 'generic/platform=iOS'
+              \-archivePath $RUNNER_TEMP/YourApp.xcarchive \
+              \-archivePath ${{ github.workspace }}/Build/.iOS-Workspace/Unity-iPhone.xcarchive \
+              CODE_SIGN_IDENTITY="iPhone Distribution: Thad Starner (JQA766K6N5)" \
+              PROVISIONING_PROFILE_SPECIFIER="Evan Provisioning Profile" \
+              OTHER_CODE_SIGN_FLAGS="--keychain $RUNNER_TEMP/app-signing.keychain-db" # Use the keychain from step 2
 
-            echo ">>> Exporting the .ipa..."
-            xcodebuild -exportArchive \
-              -archivePath "$ARCHIVE_PATH" \
-              -exportPath "$EXPORT_PATH" \
-              -exportOptionsPlist "$EXPORT_OPTIONS_PLIST"
+
+
+          #todo: run xcodebuild build in the xcodeproj folder (needs provisioning profile) 
+          #provision profile uuid: ca70b8c2-507e-42bc-a0bb-716609752488 
+          # xcodebuild PROVISIONING_PROFILE = "ca70b8c2-507e-42bc-a0bb-716609752488" build
+          
+        # - name: Build and Sign .ipa
+        #   run: |
+        #     # Define paths for clarity
+        #     WORKSPACE_PATH="${{ github.workspace }}/Build/.iOS-Workspace/Unity-iPhone.xcworkspace"
+        #     ARCHIVE_PATH="${{ github.workspace }}/Build/iOS/PopsignAI.xcarchive"
+        #     EXPORT_PATH="${{ github.workspace }}/Build/iOS/"
+        #     EXPORT_OPTIONS_PLIST="${{ github.workspace }}/ExportOptions.plist"
+
+        #     echo ">>> Creating ExportOptions.plist"
+        #     cat << EOF > $EXPORT_OPTIONS_PLIST
+        #     <?xml version="1.0" encoding="UTF-8"?>
+        #     <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+        #     <plist version="1.0">
+        #     <dict>
+        #         <key>method</key>
+        #         <string>development</string>
+        #         <key>teamID</key>
+        #         <string>${{ secrets.APPLE_TEAM_ID }}</string>
+        #         <key>signingStyle</key>
+        #         <string>automatic</string>
+        #     </dict>
+        #     </plist>
+            
+        #     echo ">>> Archiving the project..."
+        #     xcodebuild archive \
+        #       -workspace "$WORKSPACE_PATH" \
+        #       -scheme "Unity-iPhone" \
+        #       -sdk iphoneos \
+        #       -configuration "Release" \
+        #       -archivePath "$ARCHIVE_PATH" \
+        #       -allowProvisioningUpdates \
+        #       DEVELOPMENT_TEAM="${{ secrets.APPLE_TEAM_ID }}"
+
+        #     echo ">>> Exporting the .ipa..."
+        #     xcodebuild -exportArchive \
+        #       -archivePath "$ARCHIVE_PATH" \
+        #       -exportPath "$EXPORT_PATH" \
+        #       -exportOptionsPlist "$EXPORT_OPTIONS_PLIST"
 
         - name: DEBUG List all workplace files
-          run: ls -AR > listing_after_ipa.txt
+          run: ls -AR > listing_after_archive.txt
 
         - name: Upload Workplace Files
           uses: actions/upload-artifact@v4
           with:
-            name: dirs-after-ipa
-            path: listing_after_ipa.txt
+            name: dirs-after-archive
+            path: listing_after_archive.txt
 
     # build-android:
     #     runs-on: [self-hosted, macOS]
@@ -169,7 +186,8 @@ jobs:
                   Build/iOS/*.ipa
                   Build/Android/*.apk
                   ${{ github.workspace }}/Build/.iOS-Workspace/Unity-iPhone.xcodeproj
-                  Build/.iOS-Workspace/*.xarchive
+                  ${{ github.workspace }}/Build/.iOS-Workspace/Unity-iPhone.xcarchive
+                  Build/.iOS-Workspace/*.xcarchive
               tag_name: BOTH-release-${{ github.run_number }}
               token: ${{ secrets.GITHUB_TOKEN }}
           env:
