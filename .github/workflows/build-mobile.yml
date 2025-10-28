@@ -27,6 +27,8 @@ jobs:
             echo "Python libs installed"
             slrtk gtk install --unity --path .
 
+        # todo split up unity license and apple certs into a new job
+
         - name: Activate Unity License
           run: |
               /Applications/Unity/Hub/Editor/6000.0.26f1/Unity.app/Contents/MacOS/Unity \
@@ -122,8 +124,9 @@ jobs:
               -scheme "Unity-iPhone" \
               -configuration Debug \
               -archivePath "${{ github.workspace }}/Build/.iOS-Workspace/Unity-iPhone.xcarchive" \
-              -destination "generic/platform=iOS" \
+              -destination "generic/platform=iOS" \ #keep in mind that using generic here builds to the LATEST version of iOS, so it must be installed on the mac
               clean archive
+              
 
           #todo: run xcodebuild build in the xcodeproj folder (needs provisioning profile) 
           #provision profile uuid: ca70b8c2-507e-42bc-a0bb-716609752488 
