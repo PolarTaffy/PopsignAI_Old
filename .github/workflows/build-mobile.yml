@@ -85,13 +85,27 @@ jobs:
             mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
             cp $PP_PATH ~/Library/MobileDevice/Provisioning\ Profiles
 
+        - name: Upload keychain artifact
+          uses: actions/upload-artifact@v4
+          with:
+            name: app-signing-keychain
+            path: $RUNNER_TEMP/app-signing.keychain-db
+
 
     build-ios:
       runs-on: [self-hosted, macOS]
       needs: setup
       steps:
+        - name: Download keychain artifact
+          uses: actions/download-artifact@v4
+          with:
+            name: app-signing-keychain
+            path: $RUNNER_TEMP
+
         - name: Build iOS Workspace
           run: |
+            # ensure downloaded keychain is in the user's keychain list
+            security list-keychain -d user -s $RUNNER_TEMP/app-signing.keychain-db || true
             /Applications/Unity/Hub/Editor/6000.0.26f1/Unity.app/Contents/MacOS/Unity \
               -batchmode \
               -quit \
