@@ -4,6 +4,7 @@ on: [push, workflow_dispatch]
 env:
   RUNNER_TOOL_CACHE: ${{ github.workspace }}/.toolcache
   RUNNER_TEMP: ${{ github.workspace }}/_temp
+  KEYCHAIN_PATH: ${{ github.workspace }}/keychains/app-signing.keychain-db
 permissions:
     contents: write
 jobs:
@@ -66,7 +67,6 @@ jobs:
             # create variables
             CERTIFICATE_PATH=$RUNNER_TEMP/build_certificate.p12
             PP_PATH=$RUNNER_TEMP/build_pp.mobileprovision
-            KEYCHAIN_PATH=$RUNNER_TEMP/app-signing.keychain-db
 
             # import certificate and provisioning profile from secrets
             echo -n "$BUILD_CERTIFICATE_BASE64" | base64 --decode -o $CERTIFICATE_PATH
@@ -74,7 +74,7 @@ jobs:
 
             # create temporary keychain
             security create-keychain -p "$KEYCHAIN_PASSWORD" $KEYCHAIN_PATH
-            security set-keychain-settings -lut 21600 $KEYCHAIN_PATH
+            # security set-keychain-settings -lut 21600 $KEYCHAIN_PATH
             security unlock-keychain -p "$KEYCHAIN_PASSWORD" $KEYCHAIN_PATH
 
             # import certificate to keychain
@@ -89,7 +89,7 @@ jobs:
           uses: actions/upload-artifact@v4
           with:
             name: app-signing-keychain
-            path: $RUNNER_TEMP/app-signing.keychain-db
+            path: $KEYCHAIN_PATH
 
 
     build-ios:
@@ -100,12 +100,12 @@ jobs:
           uses: actions/download-artifact@v4
           with:
             name: app-signing-keychain
-            path: $RUNNER_TEMP
+            path: $KEYCHAIN_PATH
 
         - name: Build iOS Workspace
           run: |
             # ensure downloaded keychain is in the user's keychain list
-            security list-keychain -d user -s $RUNNER_TEMP/app-signing.keychain-db || true
+            security list-keychain -d user -s $KEYCHAIN_PATH || true
             /Applications/Unity/Hub/Editor/6000.0.26f1/Unity.app/Contents/MacOS/Unity \
               -batchmode \
               -quit \
