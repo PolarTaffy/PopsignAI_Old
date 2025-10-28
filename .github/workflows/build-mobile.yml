@@ -124,13 +124,19 @@ jobs:
         #       -scheme "Unity-iPhone" \
         #       -configuration Debug \
         #       -archivePath "${{ github.workspace }}/Build/.iOS-Workspace/Unity-iPhone.xcarchive" \
-        #       -destination "generic/platform=iOS" \ #keep in mind that using generic here builds to the LATEST version of iOS, so it must be installed on the mac
+        #       -destination "generic/platform=iOS" \
         #       clean archive
+
+        - name: List Available Code Signifing Identities
+          run: |
+            security unlock-keychain -p "$KEYCHAIN_PASSWORD" $RUNNER_TEMP/app-signing.keychain-db
+            security find-identity -v -p codesigning $RUNNER_TEMP/app-signing.keychain-db
 
         - name: Build and Archive Xcode Project
           env:
             KEYCHAIN_PASSWORD: "abc123"
           run: |
+            security unlock-keychain -p "$KEYCHAIN_PASSWORD" $RUNNER_TEMP/app-signing.keychain-db
             
             # These values should match what's in your Apple Developer account and certificate
             DEVELOPMENT_TEAM_ID="JQA766K6N5" # Extracted from your cert name
