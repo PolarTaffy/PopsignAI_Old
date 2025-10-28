@@ -46,7 +46,7 @@ jobs:
           uses: actions/upload-artifact@v4
           with:
             name: app-signing-keychain
-            path: $KEYCHAIN_PATH
+            path: ${{ env.KEYCHAIN_PATH }}
 
         - name: Install Python & Cocoapods via Homebrew
           run: |
@@ -102,7 +102,7 @@ jobs:
           uses: actions/download-artifact@v4
           with:
             name: app-signing-keychain
-            path: $KEYCHAIN_PATH
+            path: ${{ env.KEYCHAIN_PATH }}
 
         - name: Build iOS Workspace
           run: |
@@ -145,14 +145,14 @@ jobs:
 
         - name: List Available Code Signifing Identities
           run: |
-            security unlock-keychain -p "$KEYCHAIN_PASSWORD" $RUNNER_TEMP/app-signing.keychain-db
-            security find-identity -v -p codesigning $RUNNER_TEMP/app-signing.keychain-db
+            security unlock-keychain -p "$KEYCHAIN_PASSWORD" $KEYCHAIN_PATH
+            security find-identity -v -p codesigning $KEYCHAIN_PATH
 
         - name: Build and Archive Xcode Project
           env:
             KEYCHAIN_PASSWORD: "abc123"
           run: |
-            security unlock-keychain -p "$KEYCHAIN_PASSWORD" $RUNNER_TEMP/app-signing.keychain-db
+            security unlock-keychain -p "$KEYCHAIN_PASSWORD" $KEYCHAIN_PATH
             
             # These values should match what's in your Apple Developer account and certificate
             DEVELOPMENT_TEAM_ID="JQA766K6N5" # Extracted from your cert name
