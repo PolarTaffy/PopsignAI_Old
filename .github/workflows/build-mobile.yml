@@ -117,15 +117,37 @@ jobs:
         #       PROVISIONING_PROFILE_SPECIFIER="Evan Provisioning Profile" \
         #       OTHER_CODE_SIGN_FLAGS="--keychain $RUNNER_TEMP/app-signing.keychain-db" # Use the keychain from step 2
 
-        - name: build archive
+        # - name: build archive
+        #   run: |
+        #     xcodebuild \
+        #       -project "${{ github.workspace }}/Build/.iOS-Workspace/Unity-iPhone.xcodeproj" \
+        #       -scheme "Unity-iPhone" \
+        #       -configuration Debug \
+        #       -archivePath "${{ github.workspace }}/Build/.iOS-Workspace/Unity-iPhone.xcarchive" \
+        #       -destination "generic/platform=iOS" \ #keep in mind that using generic here builds to the LATEST version of iOS, so it must be installed on the mac
+        #       clean archive
+
+        - name: Build and Archive Xcode Project
+          env:
+            KEYCHAIN_PASSWORD: "abc123"
           run: |
+            
+            # These values should match what's in your Apple Developer account and certificate
+            DEVELOPMENT_TEAM_ID="JQA766K6N5" # Extracted from your cert name
+            PROVISIONING_PROFILE_NAME="Evan Provisioning Profile"
+            CODE_SIGN_IDENTITY_NAME="iPhone Distribution: Thad Starner (JQA766K6N5)"
+            
             xcodebuild \
               -project "${{ github.workspace }}/Build/.iOS-Workspace/Unity-iPhone.xcodeproj" \
               -scheme "Unity-iPhone" \
-              -configuration Debug \
+              -configuration "Release" \
               -archivePath "${{ github.workspace }}/Build/.iOS-Workspace/Unity-iPhone.xcarchive" \
-              -destination "generic/platform=iOS" \ #keep in mind that using generic here builds to the LATEST version of iOS, so it must be installed on the mac
-              clean archive
+              -destination "generic/platform=iOS" \
+              clean archive \
+              CODE_SIGN_STYLE=Manual \
+              DEVELOPMENT_TEAM="$DEVELOPMENT_TEAM_ID" \
+              PROVISIONING_PROFILE_SPECIFIER="$PROVISIONING_PROFILE_NAME" \
+              CODE_SIGN_IDENTITY="$CODE_SIGN_IDENTITY_NAME"
               
 
           #todo: run xcodebuild build in the xcodeproj folder (needs provisioning profile) 
