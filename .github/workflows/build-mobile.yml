@@ -150,11 +150,22 @@ jobs:
             security unlock-keychain -p $KEYCHAIN_PASSWORD $KEYCHAIN_PATH
             security find-identity -v -p codesigning $KEYCHAIN_PATH
 
+        - name: Patch Xcode Project for CI
+          run: |
+            PROJECT_FILE_PATH="${{ github.workspace }}/Build/.iOS-Workspace/Unity-iPhone.xcodeproj/project.pbxproj"
+            
+            # Set UnityFramework to Automatic signing
+            sed -i '' 's/PROVISIONING_PROFILE_SPECIFIER = ".*";/PROVISIONING_PROFILE_SPECIFIER = "";/g' "$PROJECT_FILE_PATH"
+            sed -i '' 's/CODE_SIGN_STYLE = Manual;/CODE_SIGN_STYLE = Automatic;/g' "$PROJECT_FILE_PATH"
+            
+            echo "Successfully patched the Xcode project for UnityFramework."
+
         - name: Build and Archive Xcode Project
           env:
             KEYCHAIN_PASSWORD: "abc123"
           run: |
             security unlock-keychain -p "$KEYCHAIN_PASSWORD" $KEYCHAIN_PATH
+            security set-key-partition-list -S apple-tool:,apple: -s -k "$KEYCHAIN_PASSWORD" $KEYCHAIN_PATH
             
             # These values should match what's in your Apple Developer account and certificate
             DEVELOPMENT_TEAM_ID="JQA766K6N5" # Extracted from your cert name
