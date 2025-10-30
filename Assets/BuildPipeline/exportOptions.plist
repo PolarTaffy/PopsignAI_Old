@@ -8,7 +8,7 @@
     <string>manual</string>
     <key>provisioningProfiles</key>
     <dict>
-        <key>edu.gatech.ccg.popsignai</key>
+        <key>JQA766K6N5.edu.gatech.ccg.popsignai</key>
         <string>Evan Provisioning Profile</string>
     </dict>
     <key>teamID</key>
