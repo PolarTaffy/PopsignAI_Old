@@ -143,9 +143,11 @@ jobs:
         #       -destination "generic/platform=iOS" \
         #       clean archive
 
-        - name: List Available Code Signifing Identities
+        - name: List Available Code Signing Identities
+          env:
+            KEYCHAIN_PASSWORD: "abc123"
           run: |
-            security unlock-keychain -p "$KEYCHAIN_PASSWORD" $KEYCHAIN_PATH
+            security unlock-keychain -p $KEYCHAIN_PASSWORD $KEYCHAIN_PATH
             security find-identity -v -p codesigning $KEYCHAIN_PATH
 
         - name: Build and Archive Xcode Project
