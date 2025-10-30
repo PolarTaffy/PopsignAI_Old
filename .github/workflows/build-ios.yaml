@@ -66,7 +66,7 @@ jobs:
                 # Create the directory if it doesn't exist
                 mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
                 # Decode the base64 secret and save it to the correct directory
-                echo "${{ secrets.BUILD_PROVISION_PROFILE_BASE64 }}" | base64 --decode > ~/Library/MobileDevice/Provisioning\ Profiles/${{ secrets.PROVISIONING_PROFILE_NAME }}.mobileprovision
+                echo "${{ secrets.BUILD_PROVISION_PROFILE_BASE64 }}" | base64 --decode > ~/Library/MobileDevice/Provisioning\ Profiles/Evan_Provisioning_Profile.mobileprovision
 
             # 5. Build the IPA with xcodebuild
           - name: Build Xcode project
@@ -79,13 +79,18 @@ jobs:
                     -project "$PROJECT_PATH" \
                     -scheme "$SCHEME_NAME" \
                     -archivePath "build/Unity-iPhone.xcarchive" \
-                    -allowProvisioningUpdates
+                    -allowProvisioningUpdates \
+                    CODE_SIGN_STYLE="Manual" \
+                    DEVELOPMENT_TEAM="${{ secrets.APPLE_TEAM_ID }}" \
+                    PROVISIONING_PROFILE_SPECIFIER="Evan Provisioning Profile" \
+                    CODE_SIGN_IDENTITY="iPhone Distribution: Thad Starner (JQA766K6N5)"
 
                 # Export the .ipa
                 xcodebuild -exportArchive \
                     -archivePath "build/Unity-iPhone.xcarchive" \
                     -exportPath "build/ipa" \
-                    -exportOptionsPlist ${{ github.workspace }}/Assets/BuildPipeline/exportOptions.plist
+                    -exportOptionsPlist ${{ github.workspace }}/Assets/BuildPipeline/exportOptions.plist \
+                    -allowProvisioningUpdates
             
           - uses: actions/upload-artifact@v4
             with:
