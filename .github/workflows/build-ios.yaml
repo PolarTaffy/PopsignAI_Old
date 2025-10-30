@@ -81,14 +81,19 @@ jobs:
                     -archivePath "build/Unity-iPhone.xcarchive" \
                     -allowProvisioningUpdates \
                     CODE_SIGN_STYLE="Automatic" \
+                    CODE_SIGN_IDENTITY="Apple Development" \
+                    CODE_SIGNING_ALLOWED=YES \
 
                 # Export the .ipa
                 xcodebuild -exportArchive \
                     -archivePath "build/Unity-iPhone.xcarchive" \
                     -exportPath "build/ipa" \
                     -exportOptionsPlist ${{ github.workspace }}/Assets/BuildPipeline/exportOptions.plist \
-                    -allowProvisioningUpdates
-            
+                    -allowProvisioningUpdates \
+                    # Ensure the export step also uses the development identity to avoid
+                    # conflicts when the project is set to automatic signing.
+                    CODE_SIGN_IDENTITY="Apple Development" \
+                    CODE_SIGNING_ALLOWED=YES
           - uses: actions/upload-artifact@v4
             with:
                 name: build-after-artifact
