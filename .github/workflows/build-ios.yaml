@@ -81,9 +81,6 @@ jobs:
                     -archivePath "build/Unity-iPhone.xcarchive" \
                     -allowProvisioningUpdates \
                     CODE_SIGN_STYLE="Automatic" \
-                    DEVELOPMENT_TEAM="${{ secrets.APPLE_TEAM_ID }}" \
-                    PROVISIONING_PROFILE_SPECIFIER="Evan Provisioning Profile" \
-                    CODE_SIGN_IDENTITY="iPhone Distribution: Thad Starner (JQA766K6N5)"
 
                 # Export the .ipa
                 xcodebuild -exportArchive \
