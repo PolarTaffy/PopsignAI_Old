@@ -14,7 +14,7 @@ jobs:
             targetPlatform:
                 - iOS
         env:
-            KEYCHAIN: job-${{ github.job }}-${{ github.run_id	}}-${{ github.run_number }}-${{ github.run_attempt }}
+            KEYCHAIN: job-${{ github.job }}-${{ github.run_id }}-${{ github.run_number }}-${{ github.run_attempt }}
         steps:
           - name: Checkout repository
             uses: actions/checkout@v4
@@ -48,10 +48,11 @@ jobs:
                 targetPlatform: ${{ matrix.targetPlatform }}
                 allowDirtyBuild: true
 
-          - uses: actions/upload-artifact@v4
-            with:
-                name: Build
-                path: build
+        #   - uses: actions/upload-artifact@v4
+        #     with:
+        #         name: Build
+        #         path: build
+        #     #don't really need to have entire build folder uploaded anymore since it works
 
           - name: Import Certs
             uses: apple-actions/import-codesign-certs@v3
@@ -59,6 +60,13 @@ jobs:
                 keychain: ${{ env.KEYCHAIN }}
                 p12-file-base64: ${{ secrets.BUILD_CERTIFICATE_BASE64 }}
                 p12-password: ${{ secrets.P12_PASSWORD }}    
+
+          - name: Install Provisioning Profile
+            run: |
+                # Create the directory if it doesn't exist
+                mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
+                # Decode the base64 secret and save it to the correct directory
+                echo "${{ secrets.BUILD_PROVISION_PROFILE_BASE64 }}" | base64 --decode > ~/Library/MobileDevice/Provisioning\ Profiles/${{ secrets.PROVISIONING_PROFILE_NAME }}.mobileprovision
 
             # 5. Build the IPA with xcodebuild
           - name: Build Xcode project
