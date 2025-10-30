@@ -143,11 +143,9 @@ jobs:
         #       -destination "generic/platform=iOS" \
         #       clean archive
 
-        - name: List Available Code Signing Identities
-          env:
-            KEYCHAIN_PASSWORD: "abc123"
+        - name: List Available Code Signifing Identities
           run: |
-            security unlock-keychain -p $KEYCHAIN_PASSWORD $KEYCHAIN_PATH
+            security unlock-keychain -p "$KEYCHAIN_PASSWORD" $KEYCHAIN_PATH
             security find-identity -v -p codesigning $KEYCHAIN_PATH
 
         - name: Patch Xcode Project for CI
@@ -179,7 +177,7 @@ jobs:
               -archivePath "${{ github.workspace }}/Build/.iOS-Workspace/Unity-iPhone.xcarchive" \
               -destination "generic/platform=iOS" \
               clean archive \
-              CODE_SIGN_STYLE=Manual \
+              CODE_SIGN_STYLE=Automatic \
               DEVELOPMENT_TEAM="$DEVELOPMENT_TEAM_ID" \
               PROVISIONING_PROFILE_SPECIFIER="$PROVISIONING_PROFILE_NAME" \
               CODE_SIGN_IDENTITY="$CODE_SIGN_IDENTITY_NAME"
