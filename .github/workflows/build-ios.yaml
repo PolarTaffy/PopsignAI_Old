@@ -7,7 +7,7 @@ env:
 permissions:
     contents: write
 jobs:
-    build-ios:
+    build-mobile:
         runs-on: [self-hosted, macOS]
         strategy:
           matrix:
@@ -63,7 +63,7 @@ jobs:
             # 5. Build the IPA with xcodebuild
           - name: Build Xcode project
             run: |
-                PROJECT_PATH="build/iOS/Unity-iPhone.xcodeproj"
+                PROJECT_PATH="build/iOS/iOS/Unity-iPhone.xcodeproj"
                 SCHEME_NAME="Unity-iPhone"
 
                 # Archive the project
@@ -78,8 +78,13 @@ jobs:
                     -archivePath "build/Unity-iPhone.xcarchive" \
                     -exportPath "build/ipa" \
                     -exportOptionsPlist ${{ github.workspace }}/Assets/BuildPipeline/exportOptions.plist
+            
+          - uses: actions/upload-artifact@v4
+            with:
+                name: build-after-artifact
+                path: build
 
-        # 6. Upload the IPA as an artifact
+            # 6. Upload the IPA as an artifact
           - name: Upload .ipa artifact
             uses: actions/upload-artifact@v4
             with:
