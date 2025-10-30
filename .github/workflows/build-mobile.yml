@@ -98,11 +98,11 @@ jobs:
       runs-on: [self-hosted, macOS]
       needs: setup
       steps:
-        - name: Download keychain artifact
-          uses: actions/download-artifact@v4
-          with:
-            name: app-signing-keychain
-            path: ${{ env.KEYCHAIN_PATH }}
+        # - name: Download keychain artifact
+        #   uses: actions/download-artifact@v4
+        #   with:
+        #     name: app-signing-keychain
+        #     path: ${{ env.KEYCHAIN_PATH }}
 
         - name: Build iOS Workspace
           run: |
