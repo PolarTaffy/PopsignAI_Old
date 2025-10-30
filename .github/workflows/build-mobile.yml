@@ -1,6 +1,6 @@
 ---
 name: Build and Release on Mobile
-on: [push, workflow_dispatch]
+on: [workflow_dispatch]
 env:
   RUNNER_TOOL_CACHE: ${{ github.workspace }}/.toolcache
   RUNNER_TEMP: ${{ github.workspace }}/_temp

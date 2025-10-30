@@ -1,0 +1,49 @@
+---
+name: Build and Release on Mobile
+on: [push, workflow_dispatch]
+env:
+  RUNNER_TOOL_CACHE: ${{ github.workspace }}/.toolcache
+  RUNNER_TEMP: ${{ github.workspace }}/_temp
+  KEYCHAIN_PATH: ${{ github.workspace }}/keychains/app-signing.keychain-db
+permissions:
+    contents: write
+jobs:
+    build-ios:
+        runs-on: [self-hosted, macOS]
+        strategy:
+          matrix:
+            targetPlatform:
+                - iOS
+        steps:
+          - name: Checkout repository
+            uses: actions/checkout@v4
+
+          - name: Install Python & Cocoapods via Homebrew
+            run: |
+                brew update
+                arch -arm64 brew install python || true
+                python3 --version 
+                pip3 --version
+                brew install cocoapods
+            
+          - name: Config SLRTK
+            run: |
+                pip3 install slrtk
+                echo "Python libs installed"
+                slrtk gtk install --unity --path .
+            
+          - uses: game-ci/unity-builder@v4
+            env:
+                UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+                UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+                UNITY_SERIAL: ${{ secrets.UNITY_SERIAL }}
+            with:
+                targetPlatform: ${{ matrix.targetPlatform }}
+
+
+          - uses: actions/upload-artifact@v4
+            with:
+                name: Build
+                path: build
+    
+...
