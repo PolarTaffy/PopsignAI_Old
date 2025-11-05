@@ -74,16 +74,23 @@ jobs:
                 PROJECT_PATH="build/iOS/iOS/Unity-iPhone.xcodeproj"
                 SCHEME_NAME="Unity-iPhone"
 
-                # Archive the project
+                # # Archive the project
+                # xcodebuild archive \
+                #     -project "$PROJECT_PATH" \
+                #     -scheme "$SCHEME_NAME" \
+                #     -archivePath "build/Unity-iPhone.xcarchive" \
+                #     -allowProvisioningUpdates \
+                #     CODE_SIGN_STYLE="Automatic" \
+                #     CODE_SIGN_IDENTITY="Apple Development" \
+                #     CODE_SIGNING_ALLOWED=YES \
+                #     DEVELOPMENT_TEAM="JQA766K6N5"
+
                 xcodebuild archive \
                     -project "$PROJECT_PATH" \
-                    -scheme "$SCHEME_NAME" \
-                    -archivePath "build/Unity-iPhone.xcarchive" \
-                    -allowProvisioningUpdates \
-                    CODE_SIGN_STYLE="Automatic" \
-                    CODE_SIGN_IDENTITY="Apple Development" \
-                    CODE_SIGNING_ALLOWED=YES \
-                    DEVELOPMENT_TEAM="JQA766K6N5"
+                    -archivePath "build/Unity-iPhone.xcarchive" \ 
+                    PROVISIONING_PROFILE_SPECIFIER="Evan Provisioning Profile" \
+                    CODE_SIGN_IDENTITY="iPhone Distribution: Thad Starner (JQA766K6N5)"
+                    #i'm a little worried about running this without a scheme
 
                 # Export the .ipa
                 xcodebuild -exportArchive \
