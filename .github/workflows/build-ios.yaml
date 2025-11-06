@@ -77,6 +77,16 @@ jobs:
                   PROVISIONING_PROFILE_SPECIFIER="${{ secrets.PROVISIONING_PROFILE_SPECIFIER }}" \
                   CODE_SIGN_IDENTITY="${{ secrets.CODE_SIGN_IDENTITY }}"
 
+          - name: Export IPA from Archive
+            run: |
+                xcodebuild -exportArchive \
+                  -project "${{ github.workspace }}/build/iOS/iOS/Unity-iPhone.xcodeproj" \
+                  -exportArchive \
+                  -exportOptionsPlist "${{ github.workspace }}/Assets/BuildPipeline/exportOptions.plist" \
+                  -archivePath "${{ github.workspace }}/build/Unity-iPhone.xcarchive" \
+                  -exportPath "${{ github.workspace }}/build/release.ipa" \
+                  PROVISIONING_PROFILE_SPECIFIER="${{ secrets.PROVISIONING_PROFILE_SPECIFIER }}" \
+                  CODE_SIGN_IDENTITY="${{ secrets.CODE_SIGN_IDENTITY }}"
                     
           - uses: actions/upload-artifact@v4
             with:

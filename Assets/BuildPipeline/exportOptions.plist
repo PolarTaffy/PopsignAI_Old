@@ -3,12 +3,12 @@
 <plist version="1.0">
 <dict>
     <key>method</key>
-    <string>ad-hoc</string>
+    <string>release-testing</string>
     <key>signingStyle</key>
     <string>manual</string>
     <key>provisioningProfiles</key>
     <dict>
-        <key>JQA766K6N5.edu.gatech.ccg.popsignai</key>
+        <key>edu.gatech.ccg.popsignai</key>
         <string>Evan Provisioning Profile</string>
     </dict>
     <key>teamID</key>
