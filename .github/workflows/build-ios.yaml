@@ -7,14 +7,9 @@ env:
 permissions:
     contents: write
 jobs:
-    build-mobile:
-        runs-on: [self-hosted, macOS]
-        strategy:
-          matrix:
-            targetPlatform:
-                - iOS
-                - Android
-        steps:
+    setup:
+      runs-on: [self-hosted, macOS]
+      steps:
           - name: Checkout repository
             uses: actions/checkout@v4
 
@@ -32,6 +27,15 @@ jobs:
                 echo "Python libs installed"
                 slrtk gtk install --unity --path .
 
+    build-mobile:
+        runs-on: [self-hosted, macOS]
+        needs: [setup]
+        strategy:
+          matrix:
+            targetPlatform:
+                - iOS
+                - Android
+        steps:
           - uses: actions/cache@v3
             with:
                 path: Library
@@ -118,6 +122,7 @@ jobs:
     
     upload-outputs:
         runs-on: [self-hosted, macOS]
+        needs: [build-mobile, build-ios]
         steps:
             - name: Download iOS build
               uses: actions/download-artifact@v4
