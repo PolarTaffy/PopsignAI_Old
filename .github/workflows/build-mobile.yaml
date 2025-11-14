@@ -27,6 +27,23 @@ jobs:
                 echo "Python libs installed"
                 slrtk gtk install --unity --path .
 
+    run-tests:
+      env:
+        UNITY_PATH:
+      runs-on: [self-hosted]
+      needs: [setup]
+      steps:
+          - name: Run Android Tests
+            run: |
+              /Applications/Unity/Hub/Editor/6000.0.26f1/Unity.app/Contents/MacOS/Unity -runTests -batchmode -testResults ${{ github.workspace }}\AndroidResults.xml -testPlatform Android
+
+          - name: Upload Test Results
+            uses: actions/upload-artifact@v4
+            with: 
+              name: AndroidTestResults
+              path: AndroidResults.xml
+
+
     build-mobile:
         runs-on: [self-hosted, macOS]
         needs: [setup]
