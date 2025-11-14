@@ -96,12 +96,33 @@ jobs:
                   PROVISIONING_PROFILE_SPECIFIER="${{ secrets.PROVISIONING_PROFILE_SPECIFIER }}" \
                   CODE_SIGN_IDENTITY="${{ secrets.CODE_SIGN_IDENTITY }}"
 
+          - name: Generate Plist
+            run: |
+                echo '<?xml version="1.0" encoding="UTF-8"?>
+                <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+                <plist version="1.0">
+                <dict>
+                    <key>method</key>
+                    <string>release-testing</string>
+                    <key>signingStyle</key>
+                    <string>manual</string>
+                    <key>provisioningProfiles</key>
+                    <dict>
+                        <key>${{ secrets.APPLE_APP_ID }}</key>
+                        <string>${{ secrets.PROVISIONING_PROFILE_SPECIFIER }}</string>
+                    </dict>
+                    <key>teamID</key>
+                    <string>${{ secrets.APPLE_TEAM_ID }}</string>
+                </dict>
+                </plist>' > ${{ github.workspace }}/exportOptions.plist
+            
+
           - name: Export IPA from Archive
             run: |
                 xcodebuild -exportArchive \
                   -project "${{ github.workspace }}/build/iOS/iOS/Unity-iPhone.xcodeproj" \
                   -exportArchive \
-                  -exportOptionsPlist "${{ github.workspace }}/Assets/BuildPipeline/exportOptions.plist" \
+                  -exportOptionsPlist "${{ github.workspace }}/exportOptions.plist" \
                   -archivePath "${{ github.workspace }}/build/Unity-iPhone.xcarchive" \
                   -exportPath "${{ github.workspace }}/build/release.ipa" \
                   PROVISIONING_PROFILE_SPECIFIER="${{ secrets.PROVISIONING_PROFILE_SPECIFIER }}" \
