@@ -27,6 +27,13 @@ jobs:
                 echo "Python libs installed"
                 slrtk gtk install --unity --path .
 
+          - name: Check for XCode Component Updates
+            run: |
+                sudo xcodebuild -license accept
+                sudo xcodebuild -runFirstLaunch -checkForNewerComponents 
+                sudo xcodebuild -downloadPlatform iOS
+                # prevents no build target issue
+
     build-mobile:
         runs-on: [self-hosted, macOS]
         needs: [setup]
@@ -93,6 +100,7 @@ jobs:
                   -project "${{ github.workspace }}/build/iOS/iOS/Unity-iPhone.xcodeproj" \
                   -archivePath "${{ github.workspace }}/build/Unity-iPhone.xcarchive" \
                   -scheme Unity-iPhone \
+                  -destination 'generic/platform=iOS' \
                   PROVISIONING_PROFILE_SPECIFIER="${{ secrets.PROVISIONING_PROFILE_SPECIFIER }}" \
                   CODE_SIGN_IDENTITY="${{ secrets.CODE_SIGN_IDENTITY }}"
 
@@ -107,14 +115,14 @@ jobs:
                   PROVISIONING_PROFILE_SPECIFIER="${{ secrets.PROVISIONING_PROFILE_SPECIFIER }}" \
                   CODE_SIGN_IDENTITY="${{ secrets.CODE_SIGN_IDENTITY }}"
 
-            # 6. Upload the IPA as an artifact
+            # Upload the IPA as an artifact
           - name: Upload .ipa artifact
             uses: actions/upload-artifact@v4
             with:
                 name: popsign-ipa
                 path: build/release.ipa/PopSignAI.ipa
 
-        #cleanup
+        # Cleanup
           - name: Delete keychain
             if: always()
             run: |
