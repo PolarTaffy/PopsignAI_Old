@@ -27,12 +27,12 @@ jobs:
                 echo "Python libs installed"
                 slrtk gtk install --unity --path .
 
-          - name: Check for XCode Component Updates
-            run: |
-                sudo xcodebuild -license accept
-                sudo xcodebuild -runFirstLaunch -checkForNewerComponents 
-                sudo xcodebuild -downloadPlatform iOS
-                # prevents no build target issue
+          # - name: Check for XCode Component Updates
+          #   run: |
+          #       sudo xcodebuild -license accept
+          #       sudo xcodebuild -runFirstLaunch -checkForNewerComponents 
+          #       sudo xcodebuild -downloadPlatform iOS
+          #       # prevents no build target issue
 
     build-mobile:
         runs-on: [self-hosted, macOS]
